@@ -1,0 +1,16 @@
+D:\work\bglobal\app\sdk\bin\Debug\net7.0-windows10.0.19041.0\sdk.deps.json
+D:\work\bglobal\app\sdk\bin\Debug\net7.0-windows10.0.19041.0\sdk.dll
+D:\work\bglobal\app\sdk\bin\Debug\net7.0-windows10.0.19041.0\sdk.pdb
+D:\work\bglobal\app\sdk\bin\Debug\net7.0-windows10.0.19041.0\bindingAndroid.dll
+D:\work\bglobal\app\sdk\bin\Debug\net7.0-windows10.0.19041.0\bindingAndroid.pdb
+D:\work\bglobal\app\sdk\bin\Debug\net7.0-windows10.0.19041.0\bindingAndroid.xml
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.csproj.AssemblyReference.cache
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.AssemblyInfoInputs.cache
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.AssemblyInfo.cs
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.csproj.CoreCompileInputs.cache
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.csproj.CopyComplete
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.dll
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\refint\sdk.dll
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\sdk.pdb
+D:\work\bglobal\app\sdk\obj\Debug\net7.0-windows10.0.19041.0\ref\sdk.dll

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25;ANDROID_26;ANDROID_27;ANDROID_28;ANDROID_29;ANDROID_30;ANDROID_31;ANDROID_32;ANDROID_33</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.AppConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.AppConfigKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Common.AppRepo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Common.AppUseCase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Repository.Auth.AuthRepoImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Repository.Data.DataRepoImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Repository.Resource.ResourceRepoImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Local.ILocalService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Local.Prefs.AppPreferences.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Model.Base.BaseApiData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Model.Base.BaseApiRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Model.Base.BaseApiResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Model.Base.BaseWebViewResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Model.Base.IApiResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Service.IAuthService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Service.IDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Api.Service.IResourceService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.AppRetrofitConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.AppRetrofitConfigKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.BaseRetrofitConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.ExceptionHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.IApiService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.ResponseExtentionKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.RetrofitFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Data.Source.Remote.Network.SSLSocketClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.DI.Factory.RepositoryFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Event.MyEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Model.Auth.AccountInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Model.Auth.LoginInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Model.BaseInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Model.Resource.FileInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Repo.IAuthRepo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Repo.IDataRepo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Domain.Repo.IResourceRepo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Exception.AppException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Exception.HandleExceptionImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Exception.IHandleException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.AnyExtKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.ApplicationExtKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.CommonExtKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.ContextExtKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.ListExtKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.MyApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.StringExtKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Ext.WorkExtKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.File.FileUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Logging.LogHelperKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Time.TimeUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Toast.ToastUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Validate.IValidate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Validate.MathValidate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Validate.PasswordValidate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.App.Utils.Validate.UsernameValidate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.BasePreference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.BaseSharePreferenceKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.SafeActionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.SafeActionManagerKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.SavedState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.Usecase.Coroutines.FlowUseCase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.Usecase.Executor.ExecutorUseCasekt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.Usecase.Executor.ITaskCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.Usecase.Executor.TaskPool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.Usecase.Executor.TaskPoolKt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.Usecase.IRequestValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Common.Usecase.VoidRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Eventbus.EventBusManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Eventbus.IEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Eventbus.IEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Repo.BaseRepo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Base.Base.Repo.IRepo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Encryption.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Publish.Encryption.EAuthInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Publish.Encryption.EFileInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Publish.Encryption.EInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Publish.Encryption.EncryptionImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Publish.Encryption.IEncryption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Bglobal.Publish.EncryptionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>
