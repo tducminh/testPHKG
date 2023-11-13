@@ -76,6 +76,32 @@
 	</ItemGroup>-->
 
 	<ItemGroup>
-	  <ProjectReference Include="..\sdk\sdk.csproj" />
+	  <Compile Update="Platforms\iOS\EncryptionImpl.cs">
+	    <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
+	  </Compile>
+	  <Compile Update="Platforms\iOS\Service.cs">
+	    <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
+	  </Compile>
+	  <Compile Update="Platforms\MacCatalyst\Service.cs">
+	    <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
+	  </Compile>
+	  <Compile Update="Platforms\Tizen\Service.cs">
+	    <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
+	  </Compile>
+	  <Compile Update="Platforms\Windows\Service.cs">
+	    <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
+	  </Compile>
+	</ItemGroup>
+
+
+
+
+	<ItemGroup>
+	  <Reference Include="androidSDK">
+	    <HintPath>..\androidSDK\bin\Release\net7.0-android\androidSDK.dll</HintPath>
+	  </Reference>
+	  <Reference Include="iosSDK">
+	    <HintPath>..\iosSDK\bin\Release\iosSDK.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 </Project>

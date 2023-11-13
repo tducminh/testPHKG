@@ -6,16 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Jars\encryption-production-release.aar" />
     <None Remove="Jars\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Jars\" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidLibrary Update="Jars\encryption-production-debug.aar">
-      <Bind></Bind>
-      <Pack></Pack>
-    </AndroidLibrary>
   </ItemGroup>
 </Project>

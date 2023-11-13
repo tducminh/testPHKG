@@ -20,6 +20,9 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 
   </ItemGroup>
@@ -33,10 +36,10 @@
 	  <Reference Include="androidSDK" Condition="$(TargetFramework.Contains('-android')) != false ">
 	    <HintPath>..\androidSDK\bin\Debug\net7.0-android\androidSDK.dll</HintPath>
 	  </Reference>
-	  <Reference Include="androidSDK">
+	  <Reference Include="androidSDK" Condition="'$(TargetFramework)' == 'net7.0-android'">
 	    <HintPath>..\androidSDK\bin\Debug\net7.0-android\androidSDK.dll</HintPath>
 	  </Reference>
-	  <Reference Include="iosSDK">
+	  <Reference Include="iosSDK" Condition="'$(TargetFramework)' == 'net7.0-ios'">
 	    <HintPath>..\iosSDK\bin\Debug\iosSDK.dll</HintPath>
 	  </Reference>
 	</ItemGroup>

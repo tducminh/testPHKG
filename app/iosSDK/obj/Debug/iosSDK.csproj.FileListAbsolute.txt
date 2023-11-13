@@ -1,8 +1,0 @@
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/bin/Debug/NativeLibrary.dll
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/bin/Debug/NativeLibrary.pdb
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/obj/Debug/_ProcessedBundleResourcesPath.items
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/obj/Debug/_ProcessedContentPath.items
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/obj/Debug/iosSDK.csproj.AssemblyReference.cache
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/obj/Debug/iosSDK.csproj.CoreCompileInputs.cache
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/obj/Debug/NativeLibrary.dll
-/Users/anhnd/work/bglobal/encryption/e2examarin/app/iosSDK/obj/Debug/NativeLibrary.pdb

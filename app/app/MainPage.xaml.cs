@@ -1,4 +1,13 @@
-﻿using sdk;
+﻿
+// xamarin
+//using sdk;
+
+// ios
+using Binding;
+
+// android
+using Com.Bglobal.Publish;
+using Com.Bglobal.Publish.Encryption;
 
 
 namespace app
@@ -6,9 +15,6 @@ namespace app
     public partial class MainPage : ContentPage
     {
         private string tag = "anhnd";
-        int count = 0;
-        private Sdk sdk = new Sdk();
-
 
         public MainPage()
         {
@@ -17,11 +23,52 @@ namespace app
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            var s = sdk.Login();
-
-            CounterBtn.Text = s;
+           
+            
+            //CounterBtn.Text = LoginBySdkWrapper();
+            CounterBtn.Text = LoginBySdkNative();
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+
+        private string LoginBySdkWrapper()
+        {
+            //Sdk sdk = DependencyService.Get<Sdk>();
+            //string s;
+
+            //if (sdk != null)
+            //{
+            //    s = sdk.Login();
+            //}
+            //else
+            //{
+            //    s = "sdk is null";
+            //}
+
+            //return s;
+
+            return "";
+        }
+
+        private string LoginBySdkNative()
+        {
+            try
+            {
+                //IEncryption encryption = EncryptionManager.Create();
+                //string s = encryption.Login("user_id");
+
+                var proxy = new TriosProxy();
+                string s = "";
+                s = proxy.InitFor;
+
+                return s;
+
+                //return "";
+            }
+            catch (Exception e)
+            {
+                return "proxy null";
+            }
         }
     }
 }
