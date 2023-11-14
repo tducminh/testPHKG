@@ -1,81 +1,81 @@
-﻿using Com.Bglobal.Publish;
-using Com.Bglobal.Publish.Encryption;
+﻿//using Com.Bglobal.Publish;
+//using Com.Bglobal.Publish.Encryption;
 
 
 
-[assembly: Dependency(typeof(sdk.SdkImpl))]
-namespace sdk
-{
-    // All the code in this file is only included on Android.
-    public class SdkImpl : Sdk
-    {
-        IEncryption encryption;
+//[assembly: Dependency(typeof(sdk.SdkImpl))]
+//namespace sdk
+//{
+//    // All the code in this file is only included on Android.
+//    public class SdkImpl : Sdk
+//    {
+//        IEncryption encryption;
 
-        public SdkImpl()
-        {
-            encryption = EncryptionManager.Create();
-        }
+//        public SdkImpl()
+//        {
+//            encryption = EncryptionManager.Create();
+//        }
 
-        public void Init()
-        {
-            //EncryptionManager.Init();
-        }
+//        public void Init()
+//        {
+//            //EncryptionManager.Init();
+//        }
 
-        string Sdk.Login()
-        {
-            string id = "user_id";
-            string s = encryption.Login(id);
+//        string Sdk.Login()
+//        {
+//            string id = "user_id";
+//            string s = encryption.Login(id);
 
-            return s;
-        }
-        string Sdk.UploadFile()
-        {
-            string[] arr = { "user_id_1", "user_id_2" };
-            string id = "attachment_id";
-            string url = "local_url";
+//            return s;
+//        }
+//        string Sdk.UploadFile()
+//        {
+//            string[] arr = { "user_id_1", "user_id_2" };
+//            string id = "attachment_id";
+//            string url = "local_url";
 
-            string s = encryption.UploadFile(id, arr, url);
+//            string s = encryption.UploadFile(id, arr, url);
 
-            return s;
-        }
+//            return s;
+//        }
 
-        string Sdk.GetFile()
-        {
-            string id = "attachment_id";
-            string s = encryption.GetFile(id);
+//        string Sdk.GetFile()
+//        {
+//            string id = "attachment_id";
+//            string s = encryption.GetFile(id);
 
-            return s;
-        }
+//            return s;
+//        }
 
-        string Sdk.UpdatPermission()
-        {
-            string id = "user_id";
-            string[] arr = { "user_id_1", "user_id_2" };
+//        string Sdk.UpdatPermission()
+//        {
+//            string id = "user_id";
+//            string[] arr = { "user_id_1", "user_id_2" };
 
-            string s = encryption.UpdatePermission(id, arr);
+//            string s = encryption.UpdatePermission(id, arr);
 
-            return s;
-        }
+//            return s;
+//        }
 
-        string Sdk.BackUp()
-        {
-            string id = "attachment_id";
-            string passcode = "passcode";
-            string url = "local_url";
+//        string Sdk.BackUp()
+//        {
+//            string id = "attachment_id";
+//            string passcode = "passcode";
+//            string url = "local_url";
 
-            string s = encryption.Backup(id, passcode, url);
+//            string s = encryption.Backup(id, passcode, url);
 
-            return s;
-        }
+//            return s;
+//        }
 
-        string Sdk.Restore()
-        {
-            string id = "attachment_id";
-            string passcode = "passcode";
+//        string Sdk.Restore()
+//        {
+//            string id = "attachment_id";
+//            string passcode = "passcode";
 
-            string s = encryption.Restore(id, passcode);
+//            string s = encryption.Restore(id, passcode);
 
-            return s;
-        }
-    }
-}
+//            return s;
+//        }
+//    }
+//}

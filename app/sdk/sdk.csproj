@@ -27,20 +27,15 @@
 
   </ItemGroup>
 	<ItemGroup>
-	  <Reference Include="androidSDK" Condition="$(TargetFramework.Contains('-android')) != false ">
-	    <HintPath>..\androidSDK\bin\Debug\net7.0-android\androidSDK.dll</HintPath>
-	  </Reference>
-	  <Reference Include="androidSDK" Condition="$(TargetFramework.Contains('-android')) != false ">
-	    <HintPath>..\androidSDK\bin\Debug\net7.0-android\androidSDK.dll</HintPath>
-	  </Reference>
-	  <Reference Include="androidSDK" Condition="$(TargetFramework.Contains('-android')) != false ">
-	    <HintPath>..\androidSDK\bin\Debug\net7.0-android\androidSDK.dll</HintPath>
-	  </Reference>
-	  <Reference Include="androidSDK" Condition="'$(TargetFramework)' == 'net7.0-android'">
-	    <HintPath>..\androidSDK\bin\Debug\net7.0-android\androidSDK.dll</HintPath>
-	  </Reference>
-	  <Reference Include="iosSDK" Condition="'$(TargetFramework)' == 'net7.0-ios'">
-	    <HintPath>..\iosSDK\bin\Debug\iosSDK.dll</HintPath>
-	  </Reference>
+	<!--Condition="'$(TargetFramework)' == 'net7.0-android'"-->
+		<Reference Include="androidSDK" Condition="'$(TargetFramework)' == 'net7.0-android'">
+			<HintPath>..\androidSDK\bin\Release\net7.0-android\androidSDK.dll</HintPath>
+		</Reference>
 	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Platforms\Android\Encryption.cs">
+	    <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
+	  </Compile>
+	</ItemGroup>
+	
 </Project>

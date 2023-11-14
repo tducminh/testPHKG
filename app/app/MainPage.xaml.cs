@@ -1,74 +1,121 @@
-﻿
-// xamarin
-//using sdk;
-
-// ios
-using Binding;
-
-// android
-using Com.Bglobal.Publish;
-using Com.Bglobal.Publish.Encryption;
-
-
-namespace app
+﻿namespace app
 {
     public partial class MainPage : ContentPage
     {
         private string tag = "anhnd";
+        private Encryption encryption = new Encryption();
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void Login(object sender, EventArgs e)
         {
-           
-            
-            //CounterBtn.Text = LoginBySdkWrapper();
-            CounterBtn.Text = LoginBySdkNative();
+            string s;
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            if (encryption != null)
+            {
+                s = encryption.Login();
+            }
+            else
+            {
+                s = "encryption is null";
+            }
+
+            LabelContent.Text = s;
+            SemanticScreenReader.Announce(LabelContent.Text);
         }
 
-        private string LoginBySdkWrapper()
+        private void UploadFile(object sender, EventArgs e)
         {
-            //Sdk sdk = DependencyService.Get<Sdk>();
-            //string s;
+            string s;
 
-            //if (sdk != null)
-            //{
-            //    s = sdk.Login();
-            //}
-            //else
-            //{
-            //    s = "sdk is null";
-            //}
+            if (encryption != null)
+            {
+                s = encryption.UploadFile();
+            }
+            else
+            {
+                s = "encryption is null";
+            }
 
-            //return s;
-
-            return "";
+            LabelContent.Text = s;
+            SemanticScreenReader.Announce(LabelContent.Text);
         }
 
-        private string LoginBySdkNative()
+        private void GetFile(object sender, EventArgs e)
         {
-            try
+            string s;
+
+            if (encryption != null)
             {
-                //IEncryption encryption = EncryptionManager.Create();
-                //string s = encryption.Login("user_id");
-
-                var proxy = new TriosProxy();
-                string s = "";
-                s = proxy.InitFor;
-
-                return s;
-
-                //return "";
+                s = encryption.GetFile();
             }
-            catch (Exception e)
+            else
             {
-                return "proxy null";
+                s = "encryption is null";
             }
+
+            LabelContent.Text = s;
+            SemanticScreenReader.Announce(LabelContent.Text);
+        }
+
+        private void UpdatePermission(object sender, EventArgs e)
+        {
+            string s;
+
+            if (encryption != null)
+            {
+                s = encryption.UpdatePermission();
+            }
+            else
+            {
+                s = "encryption is null";
+            }
+
+            LabelContent.Text = s;
+            SemanticScreenReader.Announce(LabelContent.Text);
+        }
+
+        private void BackUp(object sender, EventArgs e)
+        {
+            string s;
+
+            if (encryption != null)
+            {
+                s = encryption.BackUp();
+            }
+            else
+            {
+                s = "encryption is null";
+            }
+
+            LabelContent.Text = s;
+            SemanticScreenReader.Announce(LabelContent.Text);
+        }
+
+        private void Restore(object sender, EventArgs e)
+        {
+            string s;
+
+            if (encryption != null)
+            {
+                s = encryption.Restore();
+            }
+            else
+            {
+                s = "encryption is null";
+            }
+
+            LabelContent.Text = s;
+            SemanticScreenReader.Announce(LabelContent.Text);
+        }
+
+        private void Clear(object sender, EventArgs e)
+        {
+            LabelContent.Text = "this is logcat !!";
+            SemanticScreenReader.Announce(LabelContent.Text);
         }
     }
 }

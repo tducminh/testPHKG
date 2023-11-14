@@ -4,6 +4,7 @@
              x:Class="app.MainPage">
 
     <ScrollView>
+        
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
@@ -22,20 +23,64 @@
                 HorizontalOptions="Center" />
 
             <Label
+                 x:Name="LabelContent"
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
+            
+            <Button
+                x:Name="btnLogin"
+                Text="Login"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Login"
+                HorizontalOptions="Center" />
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
+                x:Name="btnUploadFile"
+                Text="Upload File"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Clicked="UploadFile"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="btnGetFile"
+                Text="Get File"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="GetFile"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="btnUpdatePermission"
+                Text="Update Permission"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="UpdatePermission"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="btnBackUp"
+                Text="BackUp"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="BackUp"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="btnRestore"
+                Text="Restore"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Restore"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="btnClear"
+                Text="Clear logcat"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Clear"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
+        
     </ScrollView>
 
 </ContentPage>

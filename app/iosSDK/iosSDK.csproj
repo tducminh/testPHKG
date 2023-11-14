@@ -44,8 +44,9 @@
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="..\..\..\..\..\..\Downloads\TriosProxy">
-      <Kind>Static</Kind>
+      <!-- replace path-->
+    <NativeReference Include="..\..\..\..\source_code\TriosProxy\build\Release-fat\TriosProxy.framework"> 
+      <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
