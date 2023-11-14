@@ -1,4 +1,4 @@
-﻿using Binding;
+﻿//using Binding;
 
 
 
@@ -13,13 +13,13 @@ namespace app
 
         public partial string Login()
         {
-            //return "login by ios";
+            return "login by ios";
 
 
-            var encryption = new TriosProxy();
-            string s = encryption.InitFor;
+            //var encryption = new TriosProxy();
+            //string s = encryption.InitFor;
 
-            return s;
+            //return s;
         }
 
         public partial string UploadFile()

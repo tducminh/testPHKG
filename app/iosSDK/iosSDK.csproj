@@ -44,11 +44,14 @@
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
   </ItemGroup>
   <ItemGroup>
+
       <!-- replace path-->
-    <NativeReference Include="..\..\..\..\source_code\TriosProxy\build\Release-fat\TriosProxy.framework"> 
+    <!--<NativeReference Include="..\..\..\..\source_code\TriosProxy\build\Release-fat\TriosProxy.framework"> 
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
-    </NativeReference>
+    </NativeReference>-->
+
+
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>

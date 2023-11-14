@@ -59,35 +59,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="androidSDK" Condition="$(TargetFramework.Contains('-android')) != false ">
-	    <HintPath>..\androidSDK\bin\Release\net7.0-android\androidSDK.dll</HintPath>
-	  </Reference>
-
-	  <Reference Include="iosSDK">
-	    <HintPath>..\iosSDK\bin\Release\iosSDK.dll</HintPath>
-	  </Reference>
-	</ItemGroup>
-
-	<!--<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
-	  <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.9.20">
-	  </PackageReference>
-	  <PackageReference Include="Xamarin.Kotlin.StdLib.Common" Version="1.9.20">
-	  </PackageReference>
-	  <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk7" Version="1.9.20">
-	  </PackageReference>
-	  <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.20">
-	  </PackageReference>
-	  <PackageReference Include="Xamarin.KotlinX.Coroutines.Android" Version="1.7.3.2">
-	  </PackageReference>
-	  <PackageReference Include="Xamarin.KotlinX.Coroutines.Core" Version="1.7.3.2">
-	  </PackageReference>
-	  <PackageReference Include="Xamarin.KotlinX.Coroutines.Core.Jvm" Version="1.7.3.2">
-	  </PackageReference>
-	</ItemGroup>-->
-
-	<ItemGroup>
 	  <Compile Update="Platforms\Android\Encryption.cs">
 	    <ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
 	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Resources\.DS_Store" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\.DS_Store" />
+	</ItemGroup>
+	<ItemGroup>
+
+		<Reference Include="androidSDK" Condition="$(TargetFramework.Contains('-android')) != false ">
+			<HintPath>Encryption\android\net7.0-android\androidSDK.dll</HintPath>
+		</Reference>
+
+
+		<Reference Include="iosSDK">
+		  <HintPath>Encryption\ios\iosSDK.dll</HintPath>
+	    </Reference>
+
 	</ItemGroup>
 </Project>
