@@ -5,5 +5,21 @@
   
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+
+
+
+
+  <remove-node  />
   -->
+
+
+
+    <remove-node path="/api/package[@name='com.bglobal.base.cache']/class[@name='LruCacheImpl']" />
+    <remove-node path="/api/package[@name='com.bglobal.trios.data.source.local']/class[@name='LocalApiCallRepository']" />
+    <remove-node path="/api/package[@name='org.signal.libsignal.protocol.ecc']/class[@name='ECPublicKey']" />
+    <remove-node path="/api/package[@name='com.bglobal.trios.data.source.local']/class[@name='LocalBranchAccountRepository']" />
+    <remove-node path="/api/package[@name='com.bglobal.trios.data.source.local']/class[@name='LocalContactRepository']" />
+    <remove-node path="/api/package[@name='com.bglobal.trios.data.source.local']/class[@name='LocalDeviceRepository']" />
+    <remove-node path="/api/package[@name='com.bglobal.trios.data.source.local']/class[@name='LocalMessageErrorReSendRepository']" />
+    <remove-node path="/api/package[@name='com.bglobal.trios.data.source.local']/class[@name='LocalMessageErrorSendNullRepository']" />
 </metadata>

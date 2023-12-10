@@ -10,11 +10,11 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
+            <!--<Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" />-->
 
             <Label
                 Text="Hello, World!"
@@ -27,9 +27,16 @@
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
+                FontSize="11"
                 HorizontalOptions="Center" />
-            
+
+            <Button
+                x:Name="btnFuncTest"
+                Text="Func sdk test"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="FunctionSDKTest"
+                HorizontalOptions="Center" />
+
             <Button
                 x:Name="btnLogin"
                 Text="Login"
@@ -38,17 +45,17 @@
                 HorizontalOptions="Center" />
 
             <Button
-                x:Name="btnUploadFile"
-                Text="Upload File"
+                x:Name="btnSendText"
+                Text="Send text"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="UploadFile"
+                Clicked="SendText"
                 HorizontalOptions="Center" />
 
             <Button
-                x:Name="btnGetFile"
-                Text="Get File"
+                x:Name="btnGetText"
+                Text="Get Text"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="GetFile"
+                Clicked="GetText"
                 HorizontalOptions="Center" />
 
             <Button
