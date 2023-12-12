@@ -45,7 +45,6 @@ namespace app
             }
         }
 
-
         private void SendText(object sender, EventArgs e)
         {
             try
@@ -74,6 +73,44 @@ namespace app
                 string token = "";
                 string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
                 string s = sdk.GetText(token, thirdPartyId);
+
+                LabelContent.Text = s;
+                SemanticScreenReader.Announce(LabelContent.Text);
+            }
+            catch (Exception ex)
+            {
+                LabelContent.Text = ex.StackTrace;
+                SemanticScreenReader.Announce(LabelContent.Text);
+            }
+        }
+
+        private void SendFile(object sender, EventArgs e)
+        {
+            try
+            {
+                string token = "";
+                string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
+                string[] array = { "anhnd11" };
+                string localPath = "đường dẫn tuyệt đối file cần mã trong mobile app";
+                string s = sdk.SendFile(token, thirdPartyId, array, localPath);
+
+                LabelContent.Text = s;
+                SemanticScreenReader.Announce(LabelContent.Text);
+            }
+            catch (Exception ex)
+            {
+                LabelContent.Text = ex.StackTrace;
+                SemanticScreenReader.Announce(LabelContent.Text);
+            }
+        }
+
+        private void GetFile(object sender, EventArgs e)
+        {
+            try
+            {
+                string token = "";
+                string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
+                string s = sdk.GetFile(token, thirdPartyId);
 
                 LabelContent.Text = s;
                 SemanticScreenReader.Announce(LabelContent.Text);
