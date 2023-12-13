@@ -75,7 +75,7 @@
 	
 	
 	<ItemGroup>
-	  <Reference Include="androidSDK">
+	  <Reference Include="androidSDK" Condition="$(TargetFramework.Contains('-android')) != false ">
 	    <HintPath>SDK\android\net7.0-android\androidSDK.dll</HintPath>
 	  </Reference>
 	</ItemGroup>

@@ -9,7 +9,7 @@ namespace app
         private string tag = "anhnd";
         //private Encryption encryption = new Encryption();
 
-        private const String THIRD_PARTY_TOKEN = "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJkdWN0cmFuIiwicm9sZXMiOltdLCJpYXQiOjE3MDEyNDA0MTAsImV4cCI6MTcwMzgzMjQxMH0.yjuYx4TRBHx-_TYL9AB0FhGE0qhef_tBVDFlyktAYumkcQkBcep9MypZAd-aK1x2mIHX8EBMDk2JbISLeVIiJvZUPbmchoy1xlxlJlW5c8MAb4dF27TcYV5CEZT7fhowzRJlJ1XXzARpbI9cPWpqG1ck7Y-_Wil_BlFvj_dkEdW581qhwzdz8kbemK-x1R8EXYupbIIBZfPv6Z2DUoSnSAlcVnmIwKdzr6_H73BLM5t5j0PI0PY33kQDwDoWNMFzTI5AJcdxBh6iHuYzmJdw1k927yJFKvVIQ44ToJ-QSqIUFIG8yh5Au1xJrOc59rArbUmtCDKJ5YEXrVotv0J3AQ";
+        private const String THIRD_PARTY_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im1pbmh0dXllbiIsIm5iZiI6MTcwMjQzNjcwOSwiZXhwIjoxNzAyNTIzMTA5LCJpYXQiOjE3MDI0MzY3MDksImlzcyI6ImlvaXQiLCJhdWQiOiJiZ2xvYmFsIn0.xAn5pBKt930ozYRa47-qTTfeXmKDlCKtsNvk423nR7Zk_WwoWzqp9gjO6X_wr3u06jKx4JyPMKYtDLmVObQ-mdxAt8azIeWE9peR4S8vr8C9Mcp-0WObj7BDnfozkKsMce5WmyAAgiTAxxWQ_hWfNX_hIPhX9G0V_IZO2IKwQzgH8bSUjSk_nkHtfvzpWbaupL_CSdVj6nQJ5IiVZahNrSmv4CIgZz_5XfhE3UFjaELPS013bOKrBbYp3cadbj5nvcpgP8DQP2kpEY-9iMYqgRuLrOkSNbYyd2b0hInj6zp3a6mVi7KUsD9aS6A-DWU3i1spul89ZoWvbU-M_1PvnQ";
         private const String THIRD_SERVICE_ID = "1";
 
         private IEncryption sdk = EncryptionManager.Create();
