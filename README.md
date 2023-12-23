@@ -1,22 +1,28 @@
-# Android Encryption SDK
+# Mobile Encryption SDK
 ## I. Introduction to SDK
-This library encryption E2EE
+This library encryption E2EE for mobile
 
-## II. Introduction to SDK
+## II. Change log
+
+##### Change log 1.0.4:
+1. Android `DeleteFile`
+2. Android change response function `Get File` to object, response bytes[]
+3. Improve the performance
+
 ##### Change log 1.0.3:
-1. Function `Update Permission`
-2. Function `Backup`
-3. Function `Restore`
-4. Function `Logout`
+1. Android  `Update Permission`
+2. Android  `Backup`
+3. Android  `Restore`
+4. Android  `Logout`
 
 ##### Change log 1.0.2:
-1. Function `Send File`
-2. Function `Get File`
+1. Android  `Send File`
+2. Android  `Get File`
 
 ##### Change log 1.0.1:
-1. Function `Login`
-2. Function `Send Text`
-3. Function `Get Text`
+1. Android  `Login`
+2. Android  `Send Text`
+3. Android  `Get Text`
 
 ##### Change log 1.0.0:
 - Function design
@@ -25,9 +31,19 @@ This library encryption E2EE
 ## III. SDK Setup
 ### 1. Resource
 1. Add Dependencies:
-   `android`: (SDK\android\net7.0-android\androidSDK.dll)
-
-[![Image from Gyazo](https://i.gyazo.com/fe0211198d11bde8015e5ed74fc5c155.jpg)](https://gyazo.com/fe0211198d11bde8015e5ed74fc5c155)
+    -> Right click and select `Add Project reference...`  
+  
+    [![Image from Gyazo](https://i.gyazo.com/49a49064e3b10ecb3e6445a8271ca55d.png)](https://gyazo.com/49a49064e3b10ecb3e6445a8271ca55d)
+    
+    -> select tab `.NET Assembly` and click button `Browse..`  
+  
+    [![Image from Gyazo](https://i.gyazo.com/e967784952caf04dbf83df0c0fddf543.png)](https://gyazo.com/e967784952caf04dbf83df0c0fddf543)
+   
+    -> choose file `androidSDK.dll` and `iosSDK.dll`  
+    `android`: (SDK\android\net7.0-android\androidSDK.dll)  
+    `ios`: (SDK\ios\net7.0-ios\iosSDK.dll)  
+  
+    [![Image from Gyazo](https://i.gyazo.com/5c63ca367c61e55f429ec05100c972cf.png)](https://gyazo.com/5c63ca367c61e55f429ec05100c972cf)
 
 2. Implemention library in xamarain
 ```cs
@@ -63,7 +79,7 @@ using Com.Bglobal.Publish;
 
 - Create instance
 ```cs
-using Com.Bglobal.Publish;
+using sdk;
 
 ...
 namespace app
@@ -73,7 +89,7 @@ namespace app
         ...
         private const String THIRD_PARTY_TOKEN = "eyJhbGciOiJSUzI1NiJ9......";
         private const String THIRD_SERVICE_ID = "1";
-        private IEncryption sdk = EncryptionManager.Create();
+        private SDK sdk = new SDK();
     }
 }
 
@@ -192,6 +208,9 @@ private void SendFile()
 
 - `Get File`
 ```cs
+using Com.Bglobal.Publish.Response;
+
+...
 private void GetFile()
 {
     try
@@ -202,7 +221,10 @@ private void GetFile()
         // UUID generate when send file
         string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
 
-        string s = sdk.GetFile(token, thirdPartyId);
+        DataResponse response = sdk.GetFile(token, thirdPartyId);
+        int code = response.Code;
+        string msg = response.Message;
+        byte[] bytes = response.GetData();
     }
     catch (Exception ex)
     {
@@ -211,6 +233,26 @@ private void GetFile()
 }
 ```
 
+- `Delete File`
+```cs
+private void DeleteFile()
+{
+    try
+    {
+        // token response by sdk
+        string token = "eyJhbGciOiJSUzI1NiJ9......";
+
+        // UUID generate when send text/file
+        string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
+        
+        string s = sdk.DeleteFile(token, thirdPartyId);
+    }
+    catch (Exception ex)
+    {
+        Debug.WriteLine(ex.ToString());
+    }
+}
+```
 
 - `Update Permission`
 ```cs
@@ -272,7 +314,6 @@ private void Restore()
     }
 }
 ```
-
 
 ## V. Licenses
 All information is copyright of [Bglobalcorp](https://bglobalcorp.com/)

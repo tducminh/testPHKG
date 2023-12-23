@@ -1,4 +1,5 @@
-﻿using Com.Bglobal.Publish;
+﻿using sdk;
+
 
 namespace app
 {
@@ -7,7 +8,7 @@ namespace app
         private const String THIRD_PARTY_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im1pbmh0dXllbiIsIm5iZiI6MTcwMjQ1NjkyNiwiZXhwIjoxNzAyNTQzOTI2LCJpYXQiOjE3MDI0NTY5MjYsImlzcyI6ImlvaXQiLCJhdWQiOiJiZ2xvYmFsIn0.EF2z3IuCsQX0G3ew3S-3WOTYVn1CnXHdd5iUJRpuZiWdL8A91oCIcuTBwF3m5RVkTQM56KtJGH-vIaUH8cZEDTBG0cag-wGpN77gg5ltEVEmPkfZazbLqfrHN98uX0pjEwQqpAjwlmqRk6WmDqVYRoLzdOjM03cigmlpcqjAixnuvm2pEJjsxmaEIq-n8gpHikGQROkJr_kiFZTez8ZSHOu1Qea7x5vC9ftYrMI1Iarhjbl3bWkt1oSkteZEhQ3lRt2NL26a67C27nrB6NgKGXoO-il_upegqCCt7u2QBSpAthCOicMCQNNt3EjYn8s1sREcBXVIYiPrmxRPwSNN1w";
         private const String THIRD_SERVICE_ID = "1";
 
-        private IEncryption sdk = EncryptionManager.Create();
+        private SDK sdk = new SDK();
 
         public MainPage()
         {
@@ -53,7 +54,7 @@ namespace app
                 string token = "eyJhbGciOiJSUzI1NiJ9......";
                 string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
                 string[] array = { "user_1", "user_2" };
-                string content = "nội dung cần mã hoá";
+                string content = "content to be encrypted";
 
                 string s = sdk.SendText(token, thirdPartyId, array, content);
 
@@ -111,10 +112,29 @@ namespace app
             {
                 string token = "eyJhbGciOiJSUzI1NiJ9......";
                 string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
-                string s = sdk.GetFile(token, thirdPartyId);
+                String s = sdk.GetFile(token, thirdPartyId);
 
                 LabelContent.Text = s;
                 SemanticScreenReader.Announce(LabelContent.Text);
+            }
+            catch (Exception ex)
+            {
+                LabelContent.Text = ex.StackTrace;
+                SemanticScreenReader.Announce(LabelContent.Text);
+            }
+        }
+
+        private void DeleteFile(object sender, EventArgs e)
+        {
+            try
+            {
+                // token response by sdk
+                string token = "eyJhbGciOiJSUzI1NiJ9......";
+
+                // UUID generate when send text/file
+                string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
+
+                string s = sdk.DeleteFile(token, thirdPartyId);
             }
             catch (Exception ex)
             {
@@ -176,20 +196,20 @@ namespace app
             }
         }
 
-
         private void FunctionSDKTest(object sender, EventArgs e)
         {
-            string s = sdk.FunctionSDKTest("test response data");
+            try
+            {
+                string s = "data test......!";
 
-            LabelContent.Text = s;
-            SemanticScreenReader.Announce(LabelContent.Text);
-        }
-
-
-        private void Clear(object sender, EventArgs e)
-        {
-            LabelContent.Text = "this is logcat !!";
-            SemanticScreenReader.Announce(LabelContent.Text);
+                LabelContent.Text = s;
+                SemanticScreenReader.Announce(LabelContent.Text);
+            }
+            catch (Exception ex)
+            {
+                LabelContent.Text = ex.StackTrace;
+                SemanticScreenReader.Announce(LabelContent.Text);
+            }
         }
     }
 }
