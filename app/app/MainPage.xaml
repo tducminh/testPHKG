@@ -10,12 +10,6 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <!--<Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />-->
-
             <Label
                 Text="Hello, World!"
                 SemanticProperties.HeadingLevel="Level1"
@@ -37,54 +31,6 @@
                 Clicked="FunctionSDKTest"
                 HorizontalOptions="Center" />
 
-            <Button
-                x:Name="btnLogin"
-                Text="Login"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="Login"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="btnSendText"
-                Text="Send text"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="SendText"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="btnGetText"
-                Text="Get Text"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="GetText"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="btnUpdatePermission"
-                Text="Update Permission"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="UpdatePermission"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="btnBackUp"
-                Text="BackUp"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="BackUp"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="btnRestore"
-                Text="Restore"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="Restore"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="btnClear"
-                Text="Clear logcat"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="Clear"
-                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
         
