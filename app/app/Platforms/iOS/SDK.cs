@@ -1,44 +1,47 @@
 ﻿
+using iosEncryption;
 
 namespace sdk
 {
     public partial class SDK
     {
-       
+        private Encryption sdk;
 
         public SDK()
         {
-
+            sdk = new Encryption(); 
         }
 
         public partial string Login(string thirdPartyToken, string thirdServiceId, string userId)
         {
-            return "";
+            return sdk.Login(thirdPartyToken, thirdServiceId, userId);
         }
 
         public partial string Logout()
         {
-            return "";
+            var accessToken = "jwt";
+            return sdk.Logout(accessToken);
         }
 
         public partial string SendText(string token, string thirdPartyId, string[] userIds, string content)
         {
-            return "";
+            return sdk.SendText(token, thirdPartyId, userIds, content);
         }
 
         public partial string GetText(string token, string thirdPartyId)
         {
-            return "";
+            return sdk.GetText(token, thirdPartyId);
         }
 
         public partial string SendFile(string token, string thirdPartyId, string[] userIds, byte[] bytes)
         {
-            return "";
+            var strBase64 = "data_to_str_base64";
+            return sdk.SendFile(token, thirdPartyId, userIds, strBase64);
         }
 
         public partial string GetFile(string token, string thirdPartyId)
         {
-            return "";
+            return sdk.GetFile(token, thirdPartyId);
         }
 
         public partial string DeleteFile(string token, string thirdPartyId)
@@ -48,17 +51,17 @@ namespace sdk
 
         public partial string UpdatePermission(string token, string thirdPartyId, string[] userIds)
         {
-            return "";
+            return sdk.UpdatePermission(token, thirdPartyId, userIds);
         }
 
         public partial string Backup(string token)
         {
-            return "";
+            return sdk.Backup(token);
         }
 
         public partial string Restore(string token)
         {
-            return "";
+            return sdk.Restore(token);
         }
     }
 }

@@ -1,12 +1,12 @@
 ﻿<BindingAssembly>
-	<NativeReference Name="Encryption">
+	<NativeReference Name="Encryption.framework">
 		<ForceLoad></ForceLoad>
 		<Frameworks></Frameworks>
 		<IsCxx></IsCxx>
-		<Kind>Static</Kind>
+		<Kind>Framework</Kind>
 		<LinkerFlags></LinkerFlags>
 		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
-		<SmartLink></SmartLink>
+		<SmartLink>False</SmartLink>
 		<WeakFrameworks></WeakFrameworks>
 	</NativeReference>
 </BindingAssembly>
