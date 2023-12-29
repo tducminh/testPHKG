@@ -73,6 +73,104 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "SDKDataResponse",
+        "printedName": "SDKDataResponse",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SDKDataResponse",
+                "printedName": "Encryption.SDKDataResponse",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)init",
+            "mangledName": "$s10Encryption15SDKDataResponseCACycfc",
+            "moduleName": "Encryption",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Encryption@objc(cs)SDKDataResponse",
+        "mangledName": "$s10Encryption15SDKDataResponseC",
+        "moduleName": "Encryption",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -728,6 +826,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Encryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "LibSignalClient",
         "printedName": "LibSignalClient",
         "declKind": "Import",
@@ -763,6 +871,16 @@
         "printedName": "LibSignalClient",
         "declKind": "Import",
         "moduleName": "Encryption"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Encryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -998,6 +1116,405 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "EncryptionProtocol",
+        "printedName": "EncryptionProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "login",
+            "printedName": "login(thirdPartyToken:thirdServiceId:userId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)loginWithThirdPartyToken:thirdServiceId:userId:",
+            "mangledName": "$s10Encryption0A8ProtocolP5login15thirdPartyToken0D9ServiceId04userH0S2S_S2StF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendText",
+            "printedName": "sendText(token:thirdPartyId:userIds:text:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)sendTextWithToken:thirdPartyId:userIds:text:",
+            "mangledName": "$s10Encryption0A8ProtocolP8sendText5token12thirdPartyId7userIds4textS2S_SSSaySSGSStF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getText",
+            "printedName": "getText(token:thirdPartyId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)getTextWithToken:thirdPartyId:",
+            "mangledName": "$s10Encryption0A8ProtocolP7getText5token12thirdPartyIdS2S_SStF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendFile",
+            "printedName": "sendFile(token:thirdPartyId:userIds:buffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)sendFileWithToken:thirdPartyId:userIds:buffer:",
+            "mangledName": "$s10Encryption0A8ProtocolP8sendFile5token12thirdPartyId7userIds6bufferS2S_SSSaySSG10Foundation4DataVtF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFile",
+            "printedName": "getFile(token:thirdPartyId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SDKDataResponse",
+                "printedName": "Encryption.SDKDataResponse",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)getFileWithToken:thirdPartyId:",
+            "mangledName": "$s10Encryption0A8ProtocolP7getFile5token12thirdPartyIdAA15SDKDataResponseCSS_SStF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteFile",
+            "printedName": "deleteFile(token:thirdPartyId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)deleteFileWithToken:thirdPartyId:",
+            "mangledName": "$s10Encryption0A8ProtocolP10deleteFile5token12thirdPartyIdS2S_SStF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updatePermission",
+            "printedName": "updatePermission(token:thirdPartyId:userIds:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)updatePermissionWithToken:thirdPartyId:userIds:",
+            "mangledName": "$s10Encryption0A8ProtocolP16updatePermission5token12thirdPartyId7userIdsS2S_SSSaySSGtF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "restore",
+            "printedName": "restore(token:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)restoreWithToken:",
+            "mangledName": "$s10Encryption0A8ProtocolP7restore5tokenS2S_tF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logout",
+            "printedName": "logout(token:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol(im)logoutWithToken:",
+            "mangledName": "$s10Encryption0A8ProtocolP6logout5tokenS2S_tF",
+            "moduleName": "Encryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : Encryption.EncryptionProtocol>",
+            "sugared_genericSig": "<Self where Self : Encryption.EncryptionProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol",
+        "mangledName": "$s10Encryption0A8ProtocolP",
+        "moduleName": "Encryption",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "objc_name": "EncryptionProtocol",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "Encryption",
         "printedName": "Encryption",
         "children": [
@@ -1037,8 +1554,8 @@
             "moduleName": "Encryption",
             "objc_name": "loginWithThirdPartyToken:thirdServiceId:userId:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1092,8 +1609,8 @@
             "moduleName": "Encryption",
             "objc_name": "sendTextWithToken:thirdPartyId:userIds:text:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1127,8 +1644,8 @@
             "moduleName": "Encryption",
             "objc_name": "getTextWithToken:thirdPartyId:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1171,19 +1688,19 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
               }
             ],
             "declKind": "Func",
             "usr": "c:@M@Encryption@objc(cs)Encryption(im)sendFileWithToken:thirdPartyId:userIds:buffer:",
-            "mangledName": "$s10EncryptionAAC8sendFile5token12thirdPartyId7userIds6bufferS2S_SSSaySSGSStF",
+            "mangledName": "$s10EncryptionAAC8sendFile5token12thirdPartyId7userIds6bufferS2S_SSSaySSG10Foundation4DataVtF",
             "moduleName": "Encryption",
             "objc_name": "sendFileWithToken:thirdPartyId:userIds:buffer:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1191,6 +1708,41 @@
             "kind": "Function",
             "name": "getFile",
             "printedName": "getFile(token:thirdPartyId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SDKDataResponse",
+                "printedName": "Encryption.SDKDataResponse",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Encryption@objc(cs)Encryption(im)getFileWithToken:thirdPartyId:",
+            "mangledName": "$s10EncryptionAAC7getFile5token12thirdPartyIdAA15SDKDataResponseCSS_SStF",
+            "moduleName": "Encryption",
+            "objc_name": "getFileWithToken:thirdPartyId:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteFile",
+            "printedName": "deleteFile(token:thirdPartyId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1212,13 +1764,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@Encryption@objc(cs)Encryption(im)getFileWithToken:thirdPartyId:",
-            "mangledName": "$s10EncryptionAAC7getFile5token12thirdPartyIdS2S_SStF",
+            "usr": "c:@M@Encryption@objc(cs)Encryption(im)deleteFileWithToken:thirdPartyId:",
+            "mangledName": "$s10EncryptionAAC10deleteFile5token12thirdPartyIdS2S_SStF",
             "moduleName": "Encryption",
-            "objc_name": "getFileWithToken:thirdPartyId:",
+            "objc_name": "deleteFileWithToken:thirdPartyId:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1266,8 +1818,8 @@
             "moduleName": "Encryption",
             "objc_name": "updatePermissionWithToken:thirdPartyId:userIds:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1324,8 +1876,8 @@
             "moduleName": "Encryption",
             "objc_name": "restoreWithToken:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1353,8 +1905,8 @@
             "moduleName": "Encryption",
             "objc_name": "logoutWithToken:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1400,6 +1952,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "EncryptionProtocol",
+            "printedName": "EncryptionProtocol",
+            "usr": "c:@M@Encryption@objc(pl)EncryptionProtocol",
+            "mangledName": "$s10Encryption0A8ProtocolP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -41893,6 +42452,146 @@
       "value": "\"modified\""
     },
     {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 360,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 421,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 452,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 360,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 421,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 452,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 748,
+      "length": 15,
+      "value": "\"attachment_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 787,
+      "length": 10,
+      "value": "\"group_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 822,
+      "length": 11,
+      "value": "\"device_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 856,
+      "length": 9,
+      "value": "\"user_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 890,
+      "length": 11,
+      "value": "\"branch_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 927,
+      "length": 12,
+      "value": "\"account_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 748,
+      "length": 15,
+      "value": "\"attachment_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 787,
+      "length": 10,
+      "value": "\"group_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 822,
+      "length": 11,
+      "value": "\"device_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 856,
+      "length": 9,
+      "value": "\"user_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 890,
+      "length": 11,
+      "value": "\"branch_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentDeleteResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 927,
+      "length": 12,
+      "value": "\"account_id\""
+    },
+    {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/View\/MessageViewDto.swift",
       "kind": "StringLiteral",
       "offset": 397,
@@ -42395,6 +43094,202 @@
       "offset": 401,
       "length": 11,
       "value": "\"last_time\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 354,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 383,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 415,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 446,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 354,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 383,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 415,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 446,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 855,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 880,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 907,
+      "length": 6,
+      "value": "\"size\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 938,
+      "length": 11,
+      "value": "\"mime_type\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 970,
+      "length": 6,
+      "value": "\"name\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 996,
+      "length": 5,
+      "value": "\"url\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1023,
+      "length": 7,
+      "value": "\"state\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1054,
+      "length": 9,
+      "value": "\"options\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1098,
+      "length": 23,
+      "value": "\"created_by_account_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1145,
+      "length": 9,
+      "value": "\"created\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 855,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 880,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 907,
+      "length": 6,
+      "value": "\"size\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 938,
+      "length": 11,
+      "value": "\"mime_type\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 970,
+      "length": 6,
+      "value": "\"name\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 996,
+      "length": 5,
+      "value": "\"url\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1023,
+      "length": 7,
+      "value": "\"state\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1054,
+      "length": 9,
+      "value": "\"options\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1098,
+      "length": 23,
+      "value": "\"created_by_account_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1145,
+      "length": 9,
+      "value": "\"created\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Auth\/RemoteAuthRepository.swift",
@@ -45619,168 +46514,168 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "IntegerLiteral",
-      "offset": 564,
+      "offset": 1315,
       "length": 2,
       "value": "84"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 693,
+      "offset": 1444,
       "length": 18,
       "value": "\"Missing passcode\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 1084,
+      "offset": 1835,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 1148,
+      "offset": 1899,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 2282,
+      "offset": 2579,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 2800,
+      "offset": 3097,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 3491,
+      "offset": 3190,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 4057,
+      "offset": 3756,
       "length": 20,
       "value": "\"Message not found!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 4144,
+      "offset": 3843,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 4852,
+      "offset": 3936,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 5512,
+      "offset": 4594,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 6203,
+      "offset": 4687,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 6772,
+      "offset": 5276,
       "length": 17,
       "value": "\"File not found!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 6856,
+      "offset": 5519,
+      "length": 17,
+      "value": "\"File not found!\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
+      "kind": "StringLiteral",
+      "offset": 6351,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 7564,
+      "offset": 6961,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 8174,
+      "offset": 7652,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 8865,
+      "offset": 8126,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 9339,
+      "offset": 8219,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 10047,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
-      "kind": "StringLiteral",
-      "offset": 10535,
+      "offset": 8707,
       "length": 33,
       "value": "\"Cannot find any backup version!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 10954,
+      "offset": 9126,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 11662,
+      "offset": 9219,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 12209,
+      "offset": 9822,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 12917,
+      "offset": 9915,
       "length": 2,
       "value": "\"\""
     },
@@ -49336,44 +50231,58 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14298,
+      "offset": 14473,
       "length": 23,
       "value": "\"Cannote decrypt file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14342,
+      "offset": 14517,
       "length": 22,
       "value": "\"Cannot decrypt file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14479,
+      "offset": 14654,
       "length": 22,
       "value": "\"Can not create file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14522,
+      "offset": 14697,
       "length": 22,
       "value": "\"Can not create file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14647,
+      "offset": 14822,
       "length": 24,
       "value": "\"File exceeds capacity!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14692,
+      "offset": 14867,
       "length": 24,
       "value": "\"File exceeds capacity!\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 14993,
+      "length": 26,
+      "value": "\"Cannot delete this file!\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Utilities\/FileUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 15040,
+      "length": 26,
+      "value": "\"Cannot delete this file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Data\/Entity\/Groups\/Groups+CoreData.swift",
@@ -52633,21 +53542,28 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/PublishSDK\/FileSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 1750,
+      "offset": 1851,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/PublishSDK\/FileSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2911,
+      "offset": 3009,
+      "length": 20,
+      "value": "\"Message not found!\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/PublishSDK\/FileSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 3552,
       "length": 20,
       "value": "\"Message not found!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/PublishSDK\/FileSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 3393,
+      "offset": 4350,
       "length": 5,
       "value": "false"
     },
@@ -61642,42 +62558,63 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 1270,
+      "offset": 1526,
       "length": 17,
       "value": "\"\/file\/read.json\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1569,
+      "length": 16,
+      "value": "\"\/file\/get.json\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1614,
+      "length": 18,
+      "value": "\"file\/delete.json\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 1851,
+      "offset": 2466,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 1921,
+      "offset": 2567,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 2033,
+      "offset": 2843,
+      "length": 3,
+      "value": "\"2\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 3054,
       "length": 10,
       "value": "\"group_id\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 2075,
+      "offset": 3096,
       "length": 15,
       "value": "\"attachment_id\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 2121,
+      "offset": 3142,
       "length": 14,
       "value": "\"access_token\""
     },
@@ -67508,448 +68445,448 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 1957,
+      "offset": 1964,
       "length": 13,
       "value": "\"Invalid URL\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2012,
+      "offset": 2019,
       "length": 31,
       "value": "\"Unexpected HTTP code: \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2042,
+      "offset": 2049,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2085,
+      "offset": 2092,
       "length": 37,
       "value": "\"Unexpected response from the server\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2161,
+      "offset": 2168,
       "length": 22,
       "value": "\"Unable to load image\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2241,
+      "offset": 2248,
       "length": 45,
       "value": "\"Unexpected HTTP error: \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2272,
+      "offset": 2279,
       "length": 1,
       "value": "\" : \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2285,
+      "offset": 2292,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2321,
+      "offset": 2328,
       "length": 47,
       "value": "\"Unauthorized error, please gain access token!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2898,
+      "offset": 2904,
       "length": 28,
       "value": "\"Parse json fail: \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2925,
+      "offset": 2931,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "IntegerLiteral",
-      "offset": 3292,
+      "offset": 3298,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 4952,
+      "offset": 4958,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 4963,
+      "offset": 4969,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 5139,
+      "offset": 5145,
       "length": 43,
       "value": "\"multipart\/form-data; boundary=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 5181,
+      "offset": 5187,
       "length": 48,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "IntegerLiteral",
-      "offset": 5622,
+      "offset": 5628,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "IntegerLiteral",
-      "offset": 5630,
+      "offset": 5636,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 5881,
+      "offset": 5887,
       "length": 6,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6092,
+      "offset": 6098,
       "length": 14,
       "value": "\"octet-stream\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6197,
+      "offset": 6203,
       "length": 5,
       "value": "\"zip\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6242,
+      "offset": 6248,
       "length": 5,
       "value": "\"zip\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6273,
+      "offset": 6279,
       "length": 4,
       "value": "\"gz\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6317,
+      "offset": 6323,
       "length": 6,
       "value": "\"gzip\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6391,
+      "offset": 6397,
       "length": 14,
       "value": "\"octet-stream\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6526,
+      "offset": 6532,
       "length": 19,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6540,
+      "offset": 6546,
       "length": 1,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6614,
+      "offset": 6620,
       "length": 106,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6649,
+      "offset": 6655,
       "length": 1,
       "value": "\": form-data; name=\"file\"; filename=\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6717,
+      "offset": 6723,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7004,
+      "offset": 7010,
       "length": 56,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7032,
+      "offset": 7038,
       "length": 1,
       "value": "\":application\/\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7059,
+      "offset": 7065,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7166,
+      "offset": 7172,
       "length": 50,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7207,
+      "offset": 7213,
       "length": 1,
       "value": "\": binary\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7463,
+      "offset": 7469,
       "length": 15,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7477,
+      "offset": 7483,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7584,
+      "offset": 7590,
       "length": 64,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7619,
+      "offset": 7625,
       "length": 1,
       "value": "\": form-data; name=\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7645,
+      "offset": 7651,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7754,
+      "offset": 7760,
       "length": 78,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7782,
+      "offset": 7788,
       "length": 1,
       "value": "\":text\/plain; charset=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7831,
+      "offset": 7837,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7975,
+      "offset": 7981,
       "length": 10,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7984,
+      "offset": 7990,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8124,
+      "offset": 8130,
       "length": 17,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8138,
+      "offset": 8144,
       "length": 2,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8605,
+      "offset": 8611,
       "length": 14,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8618,
+      "offset": 8624,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8691,
+      "offset": 8697,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8729,
+      "offset": 8735,
       "length": 16,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8744,
+      "offset": 8750,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8817,
+      "offset": 8823,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8856,
+      "offset": 8862,
       "length": 3,
       "value": "\"=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8920,
+      "offset": 8926,
       "length": 3,
       "value": "\"&\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9063,
+      "offset": 9069,
       "length": 14,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9076,
+      "offset": 9082,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9149,
+      "offset": 9155,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9187,
+      "offset": 9193,
       "length": 16,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9202,
+      "offset": 9208,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9275,
+      "offset": 9281,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9314,
+      "offset": 9320,
       "length": 3,
       "value": "\"=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9378,
+      "offset": 9384,
       "length": 3,
       "value": "\"&\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9417,
+      "offset": 9423,
       "length": 2,
       "value": "\"\""
     },
@@ -68458,168 +69395,168 @@
       "value": "\"encryption_db.sql\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/AccountMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/AccountMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 9,
       "value": "\"Account\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/AccountGroupMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/AccountGroupMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 378,
       "length": 14,
       "value": "\"AccountGroup\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/AccountKeyMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/AccountKeyMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 12,
       "value": "\"AccountKey\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ApiCallMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ApiCallMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 9,
       "value": "\"ApiCall\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/BranchMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/BranchMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 354,
       "length": 8,
       "value": "\"Branch\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/BranchAccountMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/BranchAccountMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 382,
       "length": 15,
       "value": "\"BranchAccount\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/CallHistoryMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/CallHistoryMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 13,
       "value": "\"CallHistory\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ContactMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ContactMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 9,
       "value": "\"Contact\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/DeviceMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/DeviceMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 354,
       "length": 8,
       "value": "\"Device\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/EmojiMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/EmojiMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 350,
       "length": 7,
       "value": "\"Emoji\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ErrorMessageRetryMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ErrorMessageRetryMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 398,
       "length": 19,
       "value": "\"ErrorMessageRetry\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ErrorMessageSendNullMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/ErrorMessageSendNullMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 410,
       "length": 22,
       "value": "\"ErrorMessageSendNull\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/GroupMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/GroupMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 350,
       "length": 7,
       "value": "\"Group\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/GroupSettingMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/GroupSettingMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 378,
       "length": 14,
       "value": "\"GroupSetting\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/IdentityKeyMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/IdentityKeyMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 13,
       "value": "\"IdentityKey\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/MessageMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/MessageMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 9,
       "value": "\"Message\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/NotificationMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/NotificationMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 378,
       "length": 14,
       "value": "\"Notification\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/OneTimePreKeysMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/OneTimePreKeysMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 386,
       "length": 16,
       "value": "\"OneTimePreKeys\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SenderKeysMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SenderKeysMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 12,
       "value": "\"SenderKeys\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SenderKeySharedMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SenderKeySharedMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 390,
       "length": 17,
       "value": "\"SenderKeyShared\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SessionsMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SessionsMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 362,
       "length": 10,
       "value": "\"Sessions\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SettingMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SettingMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 9,
       "value": "\"Setting\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SignedPreKeysMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/SignedPreKeysMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 382,
       "length": 15,
       "value": "\"SignedPreKeys\""
     },
     {
-      "filePath": "\/Users\/ducnv\/Workspace\/source_code\/Encryption\/build\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/TextSearchMO+CoreDataProperties.swift",
+      "filePath": "\/Users\/ducnv\/Library\/Developer\/Xcode\/DerivedData\/Encryption-fniimvfdearmrlbrvzysuvkfegai\/Build\/Intermediates.noindex\/Encryption.build\/Release-iphoneos\/Encryption.build\/DerivedSources\/CoreDataGenerated\/Encryption\/TextSearchMO+CoreDataProperties.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 12,

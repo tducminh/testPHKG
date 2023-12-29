@@ -1,5 +1,6 @@
 ﻿
 using iosEncryption;
+using Foundation;
 
 namespace sdk
 {
@@ -35,18 +36,28 @@ namespace sdk
 
         public partial string SendFile(string token, string thirdPartyId, string[] userIds, byte[] bytes)
         {
-            var strBase64 = "data_to_str_base64";
-            return sdk.SendFile(token, thirdPartyId, userIds, strBase64);
+            var bytesData = NSData.FromArray(bytes);
+            return sdk.SendFile(token, thirdPartyId, userIds, bytesData);
         }
 
         public partial string GetFile(string token, string thirdPartyId)
         {
-            return sdk.GetFile(token, thirdPartyId);
+            SDKDataResponse response = sdk.GetFile(token, thirdPartyId);
+
+            int code = 0;
+            Int32.TryParse(response.status, out code);
+            string errorMsg = response.error;
+            NSData data = response.data;
+
+            byte[] dataBytes = new byte[data.Length];
+            System.Runtime.InteropServices.Marshal.Copy(data.Bytes, dataBytes, 0, Convert.ToInt32(data.Length));
+
+            return "";
         }
 
         public partial string DeleteFile(string token, string thirdPartyId)
         {
-            return "";
+            return sdk.DeleteFile(token, thirdPartyId);
         }
 
         public partial string UpdatePermission(string token, string thirdPartyId, string[] userIds)

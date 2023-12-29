@@ -88,4 +88,12 @@
 		<Compile Remove="**\iOS\**\*.cs" />
 		<None Include="**\iOS\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="SDK\ios\net7.0-ios\iosSDK.resources\Encryption.framework\Modules\Encryption.swiftmodule\arm64-apple-ios.abi.json" />
+	  <None Remove="SDK\ios\net7.0-ios\iosSDK.resources\Encryption.framework\Modules\Encryption.swiftmodule\x86_64-apple-ios-simulator.abi.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="SDK\ios\net7.0-ios\iosSDK.resources\Encryption.framework\Modules\Encryption.swiftmodule\arm64-apple-ios.abi.json" />
+	  <BundleResource Include="SDK\ios\net7.0-ios\iosSDK.resources\Encryption.framework\Modules\Encryption.swiftmodule\x86_64-apple-ios-simulator.abi.json" />
+	</ItemGroup>
 </Project>

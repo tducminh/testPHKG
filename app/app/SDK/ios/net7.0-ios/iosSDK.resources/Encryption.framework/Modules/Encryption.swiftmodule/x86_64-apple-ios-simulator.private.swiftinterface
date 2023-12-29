@@ -19,17 +19,33 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
+@objc @_inheritsConvenienceInitializers @objcMembers public class SDKDataResponse : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
 extension Swift.Array where Element : Swift.Hashable {
   public var hashValue: Swift.Int {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc(Encryption) public class Encryption : ObjectiveC.NSObject {
+@objc(EncryptionProtocol) public protocol EncryptionProtocol {
+  @objc func login(thirdPartyToken: Swift.String, thirdServiceId: Swift.String, userId: Swift.String) -> Swift.String
+  @objc func sendText(token: Swift.String, thirdPartyId: Swift.String, userIds: [Swift.String], text: Swift.String) -> Swift.String
+  @objc func getText(token: Swift.String, thirdPartyId: Swift.String) -> Swift.String
+  @objc func sendFile(token: Swift.String, thirdPartyId: Swift.String, userIds: [Swift.String], buffer: Foundation.Data) -> Swift.String
+  @objc func getFile(token: Swift.String, thirdPartyId: Swift.String) -> Encryption.SDKDataResponse
+  @objc func deleteFile(token: Swift.String, thirdPartyId: Swift.String) -> Swift.String
+  @objc func updatePermission(token: Swift.String, thirdPartyId: Swift.String, userIds: [Swift.String]) -> Swift.String
+  @objc func restore(token: Swift.String) -> Swift.String
+  @objc func logout(token: Swift.String) -> Swift.String
+}
+@_inheritsConvenienceInitializers @objc(Encryption) public class Encryption : ObjectiveC.NSObject, Encryption.EncryptionProtocol {
   @objc public func login(thirdPartyToken: Swift.String, thirdServiceId: Swift.String, userId: Swift.String) -> Swift.String
   @objc public func sendText(token: Swift.String, thirdPartyId: Swift.String, userIds: [Swift.String], text: Swift.String) -> Swift.String
   @objc public func getText(token: Swift.String, thirdPartyId: Swift.String) -> Swift.String
-  @objc public func sendFile(token: Swift.String, thirdPartyId: Swift.String, userIds: [Swift.String], buffer: Swift.String) -> Swift.String
-  @objc public func getFile(token: Swift.String, thirdPartyId: Swift.String) -> Swift.String
+  @objc public func sendFile(token: Swift.String, thirdPartyId: Swift.String, userIds: [Swift.String], buffer: Foundation.Data) -> Swift.String
+  @objc public func getFile(token: Swift.String, thirdPartyId: Swift.String) -> Encryption.SDKDataResponse
+  @objc public func deleteFile(token: Swift.String, thirdPartyId: Swift.String) -> Swift.String
   @objc public func updatePermission(token: Swift.String, thirdPartyId: Swift.String, userIds: [Swift.String]) -> Swift.String
   @objc public func backup(token: Swift.String) -> Swift.String
   @objc public func restore(token: Swift.String) -> Swift.String
