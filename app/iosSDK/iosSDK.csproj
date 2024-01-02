@@ -7,14 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\Encryption.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Remove="ApiDefinitions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\Encryption.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
   </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@
 		<Kind>Framework</Kind>
 		<LinkerFlags></LinkerFlags>
 		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
-		<SmartLink></SmartLink>
+		<SmartLink>False</SmartLink>
 		<WeakFrameworks></WeakFrameworks>
 	</NativeReference>
 </BindingAssembly>
