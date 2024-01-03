@@ -13,7 +13,7 @@
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\Encryption.framework">
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\Simulator\Encryption.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>

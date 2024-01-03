@@ -14,43 +14,43 @@
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/CocoaLumberjack</key>
 		<data>
-		JbH0etlH1qRX5+SsCJjrYQLoiIo=
+		JBZdHsc8LQBPahMJrLCeVhJ/2Wc=
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
 		<data>
-		hJAbmCskOoNCBJ0znh3ccR02YwE=
+		L+dKVV5H+nPX5pCmScUJiM8EjLw=
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources</key>
 		<data>
-		X+Hozxy48amBUIUmtcbwvg7N80c=
+		KNagTYpJrxUaM108br5B9iKrl2Q=
 		</data>
 		<key>Frameworks/LibSignalClient.framework/Info.plist</key>
 		<data>
-		jtwgkF+o6TmgMlInfTZTYD2ULxM=
+		L3Wk3qzBvwQ5+LzgFBQSEaygfhc=
 		</data>
 		<key>Frameworks/LibSignalClient.framework/LibSignalClient</key>
 		<data>
-		3sqs2ePBbQZrnmkBKWElp0FRScE=
+		p3vMTt+lbRddFErShDw5hYu6Q+o=
 		</data>
 		<key>Frameworks/LibSignalClient.framework/_CodeSignature/CodeResources</key>
 		<data>
-		nfffjVPNw/rWUevdu3p4uSQ4asw=
+		GIMy1q5eO8epqM+gs7Dtfpf/Or4=
 		</data>
 		<key>Frameworks/SignalCoreKit.framework/Info.plist</key>
 		<data>
-		kB5pIdhLu6D3wuFskivvhPyXdEk=
+		z0+C1lQvyKkKn8Jk7IXULICxXUk=
 		</data>
 		<key>Frameworks/SignalCoreKit.framework/SignalCoreKit</key>
 		<data>
-		cqNDuahWxolR9PuDx9vnqiw2TgQ=
+		tdoVH/ird7OvcOwVsao6GDx0GRc=
 		</data>
 		<key>Frameworks/SignalCoreKit.framework/_CodeSignature/CodeResources</key>
 		<data>
-		tlJ6sZ8tMsp37Vsj7bHxtjI/u5w=
+		bkHeE+6OPEeW4MYWZJgWwCW7Oqs=
 		</data>
 		<key>Headers/Encryption-Swift.h</key>
 		<data>
-		HQEWspkX77dCzK7sz7BlMg7JbxA=
+		6qyDqN/BiD+b2GYV0GPfJWDGoGw=
 		</data>
 		<key>Headers/Encryption.h</key>
 		<data>
@@ -58,31 +58,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YJ9THWoPC/0dcjTRNmImnggGJ6E=
+		BPqF4M3b7ylxwrxKfnTkAa4iybA=
 		</data>
-		<key>Modules/Encryption.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<key>Modules/Encryption.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		C+UryChxTndxaq+6vB8t5J+vV14=
+		L296ktsbV64l5dI6jeFH3Y1Pjb4=
 		</data>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.abi.json</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		l8pDKzfNGPzHPEN+pn1vx/hVGmM=
+		hvhGOfpOSf3Xt+4uKdElnzMz4zU=
 		</data>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		KXbpe7NnZHu4WlxajouUlpdj3rw=
+		fhzUezKTmMKE8QTKZq+K5FBqkFw=
 		</data>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xbGcjCAb+T5fbI4h3DgGt5C+xOo=
+		RA374RT20x1vw1KkWEblOOOmyCk=
 		</data>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		KXbpe7NnZHu4WlxajouUlpdj3rw=
+		fhzUezKTmMKE8QTKZq+K5FBqkFw=
 		</data>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4EygyjT0JyectqqYIMbcF9FbZ3M=
+		c67HyER8j8JblbCM7W/YkC+I4Eg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,70 +109,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hIAxumR9drxzH4hHK9iEcGwto51DkNdZ6voVOw7DD6Y=
+			anyeYDndAAlMpkbxuKmu4pxCNa9h9yI0RG5ltJRofuY=
 			</data>
 		</dict>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6avRd+MvdWld+bhlr1QFXITOWlztvhzIeVN3z886QxY=
+			77DcNeFHkt4aB+n44bIJdSU4QpHEHCX4636W1iOrnJU=
 			</data>
 		</dict>
 		<key>Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w8i6j1C83Y4oVZRJlPAlkmn0wW/5KbyrBdbbBrO9vRA=
+			hjKZ2NrvvnIFUsXlsQ+FvcSrqc2lJqK1iHMHBArncJE=
 			</data>
 		</dict>
 		<key>Frameworks/LibSignalClient.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9rn8iUjZEP4wjzgCPFEKo1GtGOSzwU4V7ChZ3q4hWEU=
+			lrXrM78a3lRWUZnGyR8GhBRIv9sG220BogYlQnpzXTg=
 			</data>
 		</dict>
 		<key>Frameworks/LibSignalClient.framework/LibSignalClient</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AXEjsfzYaM4PUsyLn7GY/pVf2KXjTB+cXoQqHkDOb2E=
+			uI+81Oi2nT/vqzmLn9e2/6hQNNHW5dk593zdImhrRoQ=
 			</data>
 		</dict>
 		<key>Frameworks/LibSignalClient.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EIsNfi5wXVOPo1U8MWN6ifcCnHj7vJHxOesoXlMPskw=
+			RVy7DFa7hqJUF0SH3bfW5N6SEDvfx8H+nyH04+5cszw=
 			</data>
 		</dict>
 		<key>Frameworks/SignalCoreKit.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aUj0BuzsT44P+UYxbo08fBgeCrDyz5JFQXHgFbW+pxQ=
+			WojAtiuW1iv2ieN594/YxVcaB2/qJ+arJtt18oy55uc=
 			</data>
 		</dict>
 		<key>Frameworks/SignalCoreKit.framework/SignalCoreKit</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5cADmtV0GfPE29SqP/wTj2PGaI4IPMV+2XKBiPTqdCE=
+			bXFBx2Jcl474bFW4u/anxfcH4GxF5lze2ETe61oWV1A=
 			</data>
 		</dict>
 		<key>Frameworks/SignalCoreKit.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vkixLCmao/m+3e30GHVsuJh/q6e7XUkjeyPna2qddIc=
+			imkofsThXYqRTR0fz1+rp+D6nqS+7RIbIu00Xdc1xto=
 			</data>
 		</dict>
 		<key>Headers/Encryption-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g68sXRy0J+UVS31OpW+pM8PSTyQVBhL3l0tOcAtI2a8=
+			GoTK+1RnwsN1RHqIf/CFZysTdbkOicGfOD/ppzLOTdo=
 			</data>
 		</dict>
 		<key>Headers/Encryption.h</key>
@@ -182,46 +182,46 @@
 			qtmZIiwCHQzud0GZXAodDCqo1H+o8KOresw7AEuaehg=
 			</data>
 		</dict>
-		<key>Modules/Encryption.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<key>Modules/Encryption.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7TwXJ3zfPgFONrdpo/egWQAAsX15+Kf1HU6fiEHIdR8=
+			ii3qPyv5y/+3IDZ8H9U358Pvbkpk4BKri0igw2mStc8=
 			</data>
 		</dict>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.abi.json</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qKn+jPpOSM3aGOqIrVEaSLyuZ4rMDIx5i5pt1YG9Jgg=
+			qVWLX/1yA45EFc/rMRx4kA2dF9PEV4WhgAfvQ255ibw=
 			</data>
 		</dict>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0wrkuAq806qu3yPaKnp8jRljBuOyPLzIRTlHUNU6bnU=
+			RJMc9/9Zq4ONq7ojkA0gA07n7hJtLD+dzi1IsFN4UR4=
 			</data>
 		</dict>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h2XNhAwFiR8H/Hx6GlvDrGop2oJAko99M8TRvsBwFTU=
+			+K2za2njqltxdPw13J83g5nq59XcCU7jl6Iou8pms7M=
 			</data>
 		</dict>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0wrkuAq806qu3yPaKnp8jRljBuOyPLzIRTlHUNU6bnU=
+			RJMc9/9Zq4ONq7ojkA0gA07n7hJtLD+dzi1IsFN4UR4=
 			</data>
 		</dict>
-		<key>Modules/Encryption.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<key>Modules/Encryption.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MPNaGwzWVjS/F6tme/n+NRc+z2QO8Ca9tE5nSFxQ+5k=
+			Tnoi16uUearagcIFJAIB0jTrQzr4O9PlAU5DYi0sq3A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
