@@ -20,8 +20,7 @@ namespace sdk
 
         public partial string Logout()
         {
-            var accessToken = "jwt";
-            return sdk.Logout(accessToken);
+            return sdk.Logout;
         }
 
         public partial string SendText(string token, string thirdPartyId, string[] userIds, string content)

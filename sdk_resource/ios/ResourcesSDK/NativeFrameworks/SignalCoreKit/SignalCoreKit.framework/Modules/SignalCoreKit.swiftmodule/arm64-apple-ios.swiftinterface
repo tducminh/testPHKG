@@ -1,0 +1,498 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SignalCoreKit
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CocoaLumberjack
+import CommonCrypto
+import Foundation
+@_exported import SignalCoreKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class AnyPromise : ObjectiveC.NSObject {
+  convenience public init<T>(_ thenable: T) where T : SignalCoreKit.Thenable
+  @available(swift, obsoleted: 1.0)
+  @objc public class func promiseWithValue(_ value: Any) -> SignalCoreKit.AnyPromise
+  @available(swift, obsoleted: 1.0)
+  @objc public class func promiseWithError(_ error: any Swift.Error) -> SignalCoreKit.AnyPromise
+  @available(swift, obsoleted: 1.0)
+  @objc public class var withFuture: ((@escaping (SignalCoreKit.AnyFuture) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public class var withFutureOn: ((Dispatch.DispatchQueue, @escaping (SignalCoreKit.AnyFuture) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @objc convenience public init(future: (SignalCoreKit.AnyFuture) -> Swift.Void)
+  @objc required override dynamic public init()
+  @available(swift, obsoleted: 1.0)
+  @objc public var map: ((@escaping (Any) -> Any) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var mapOn: ((Dispatch.DispatchQueue, @escaping (Any) -> Any) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var done: ((@escaping (Any) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var doneOn: ((Dispatch.DispatchQueue, @escaping (Any) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var doneInBackground: ((@escaping (Any) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var then: ((@escaping (Any) -> SignalCoreKit.AnyPromise) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var thenOn: ((Dispatch.DispatchQueue, @escaping (Any) -> SignalCoreKit.AnyPromise) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var thenInBackground: ((@escaping (Any) -> SignalCoreKit.AnyPromise) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var `catch`: ((@escaping (any Swift.Error) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var catchOn: ((Dispatch.DispatchQueue, @escaping (any Swift.Error) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var catchInBackground: ((@escaping (any Swift.Error) -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var ensure: ((@escaping () -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc public var ensureOn: ((Dispatch.DispatchQueue, @escaping () -> Swift.Void) -> SignalCoreKit.AnyPromise) {
+    @objc get
+  }
+  public func asVoid() -> SignalCoreKit.Promise<Swift.Void>
+  public func asAny() -> SignalCoreKit.Promise<Any>
+  @available(swift, obsoleted: 1.0)
+  @objc public class func when(fulfilled promises: [SignalCoreKit.AnyPromise]) -> SignalCoreKit.AnyPromise
+  @available(swift, obsoleted: 1.0)
+  @objc public class func when(resolved promises: [SignalCoreKit.AnyPromise]) -> SignalCoreKit.AnyPromise
+  @objc deinit
+}
+extension SignalCoreKit.AnyPromise : SignalCoreKit.Thenable, SignalCoreKit.Catchable {
+  public typealias Value = Any
+  public var result: Swift.Result<Any, any Swift.Error>? {
+    get
+  }
+  public func observe(on queue: Dispatch.DispatchQueue? = nil, block: @escaping (Swift.Result<Any, any Swift.Error>) -> Swift.Void)
+  public func observe(on scheduler: (any SignalCoreKit.Scheduler)?, block: @escaping (Swift.Result<Any, any Swift.Error>) -> Swift.Void)
+  public func resolve(_ value: Any)
+  public func resolve<T>(on queue: Dispatch.DispatchQueue? = nil, with thenable: T) where T : SignalCoreKit.Thenable, T.Value == Any
+  public func reject(_ error: any Swift.Error)
+}
+@_hasMissingDesignatedInitializers @objc public class AnyFuture : ObjectiveC.NSObject {
+  @objc public func resolve(value: Any)
+  @objc public func reject(error: any Swift.Error)
+  @objc public func resolveWithPromise(_ promise: SignalCoreKit.AnyPromise)
+  @objc public func resolve(onQueue queue: Dispatch.DispatchQueue, withPromise promise: SignalCoreKit.AnyPromise)
+  @objc deinit
+}
+public protocol Catchable : SignalCoreKit.Thenable {
+}
+extension SignalCoreKit.Catchable {
+  @discardableResult
+  public func `catch`(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (any Swift.Error) -> Swift.Void) -> SignalCoreKit.Promise<Swift.Void>
+  @discardableResult
+  public func recover(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (any Swift.Error) -> SignalCoreKit.Guarantee<Self.Value>) -> SignalCoreKit.Guarantee<Self.Value>
+  public func recover<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (any Swift.Error) throws -> T) -> SignalCoreKit.Promise<Self.Value> where T : SignalCoreKit.Thenable, Self.Value == T.Value
+  public func ensure(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping () -> Swift.Void) -> SignalCoreKit.Promise<Self.Value>
+  @discardableResult
+  public func cauterize() -> Self
+  public func asVoid() -> SignalCoreKit.Promise<Swift.Void>
+}
+extension SignalCoreKit.Catchable where Self.Value == () {
+  @discardableResult
+  public func recover(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (any Swift.Error) -> Swift.Void) -> SignalCoreKit.Guarantee<Swift.Void>
+  public func recover(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (any Swift.Error) throws -> Swift.Void) -> SignalCoreKit.Promise<Swift.Void>
+}
+extension SignalCoreKit.Cryptography {
+  public class func encryptSHA256HMACSIV(data: Foundation.Data, key: Foundation.Data) throws -> (iv: Foundation.Data, ciphertext: Foundation.Data)
+  public class func decryptSHA256HMACSIV(iv: Foundation.Data, cipherText: Foundation.Data, key: Foundation.Data) throws -> Foundation.Data
+  @objc dynamic public class func computeSHA256DigestOfFile(at url: Foundation.URL) throws -> Foundation.Data
+  @objc dynamic public class func computeSHA256Digest(_ data: Foundation.Data) -> Foundation.Data?
+  @objc dynamic public class func computeSHA256Digest(_ data: Foundation.Data, truncatedToBytes: Swift.UInt) -> Foundation.Data?
+  @objc dynamic public class func computeSHA256HMAC(_ data: Foundation.Data, key: Foundation.Data) -> Foundation.Data?
+  @objc dynamic public class func computeSHA256HMAC(_ data: Foundation.Data, key: Foundation.Data, truncatedToBytes: Swift.UInt) -> Foundation.Data?
+}
+public struct EncryptionMetadata {
+  public let key: Foundation.Data
+  public let digest: Foundation.Data?
+  public let length: Swift.Int?
+  public let plaintextLength: Swift.Int?
+  public init(key: Foundation.Data, digest: Foundation.Data? = nil, length: Swift.Int? = nil, plaintextLength: Swift.Int? = nil)
+}
+extension SignalCoreKit.Cryptography {
+  public class func paddedSize(unpaddedSize: Swift.UInt) -> Swift.UInt
+  public class func encryptAttachment(at unencryptedUrl: Foundation.URL, output encryptedUrl: Foundation.URL) throws -> SignalCoreKit.EncryptionMetadata
+  public class func decryptAttachment(at encryptedUrl: Foundation.URL, metadata: SignalCoreKit.EncryptionMetadata, output unencryptedUrl: Foundation.URL) throws
+  public class func decryptFile(at encryptedUrl: Foundation.URL, metadata: SignalCoreKit.EncryptionMetadata, output unencryptedUrl: Foundation.URL) throws
+}
+extension Foundation.Data {
+  public var hexadecimalString: Swift.String {
+    get
+  }
+  public static func data(fromHex hexString: Swift.String) -> Foundation.Data?
+  public func ows_constantTimeIsEqual(to other: Foundation.Data) -> Swift.Bool
+  public static func join(_ dataList: [Foundation.Data]) -> Foundation.Data
+}
+public enum PromiseNamespace {
+  case promise
+  public static func == (a: SignalCoreKit.PromiseNamespace, b: SignalCoreKit.PromiseNamespace) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Dispatch.DispatchQueue : SignalCoreKit.Scheduler {
+  public func async(_ work: @escaping () -> Swift.Void)
+  public func sync<T>(_ work: () -> T) -> T
+  public func sync<T>(_ work: () throws -> T) rethrows -> T
+  public func asyncAfter(deadline: Dispatch.DispatchTime, _ work: @escaping () -> Swift.Void)
+  public func asyncAfter(wallDeadline: Dispatch.DispatchWallTime, _ work: @escaping () -> Swift.Void)
+  public func asyncIfNecessary(execute work: @escaping () -> Swift.Void)
+}
+public struct OWSAssertionError : Swift.Error {
+  public let description: Swift.String
+  public init(_ description: Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line)
+}
+public struct OWSGenericError : Swift.Error {
+  public let description: Swift.String
+  public init(_ description: Swift.String)
+}
+public func firstly<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: () throws -> T) -> SignalCoreKit.Promise<T.Value> where T : SignalCoreKit.Thenable
+public func firstly<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: () -> SignalCoreKit.Guarantee<T>) -> SignalCoreKit.Guarantee<T>
+public func firstly<T>(on scheduler: any SignalCoreKit.Scheduler, _ block: @escaping () throws -> T) -> SignalCoreKit.Promise<T.Value> where T : SignalCoreKit.Thenable
+public func firstly<T>(on scheduler: any SignalCoreKit.Scheduler, _ block: @escaping () -> SignalCoreKit.Guarantee<T>) -> SignalCoreKit.Guarantee<T>
+public func firstly<T>(on scheduler: any SignalCoreKit.Scheduler, _ block: @escaping () throws -> T) -> SignalCoreKit.Promise<T>
+public func firstly<T>(on scheduler: any SignalCoreKit.Scheduler, _ block: @escaping () -> T) -> SignalCoreKit.Guarantee<T>
+final public class Future<Value> {
+  public typealias ResultType = Swift.Result<Value, any Swift.Error>
+  public init()
+  convenience public init(value: Value)
+  convenience public init(error: any Swift.Error)
+  final public func observe(on scheduler: (any SignalCoreKit.Scheduler)? = nil, block: @escaping (SignalCoreKit.Future<Value>.ResultType) -> Swift.Void)
+  final public func resolve(_ value: Value)
+  final public func resolve<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, with thenable: T) where Value == T.Value, T : SignalCoreKit.Thenable
+  final public func reject(_ error: any Swift.Error)
+  final public var result: SignalCoreKit.Future<Value>.ResultType? {
+    get
+  }
+  final public var isSealed: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+extension SignalCoreKit.Future where Value == () {
+  final public func resolve()
+}
+final public class Guarantee<Value> : SignalCoreKit.Thenable {
+  final public var result: Swift.Result<Value, any Swift.Error>? {
+    get
+  }
+  final public var isSealed: Swift.Bool {
+    get
+  }
+  public static func pending() -> (SignalCoreKit.Guarantee<Value>, SignalCoreKit.GuaranteeFuture<Value>)
+  public init()
+  public static func value(_ value: Value) -> Self
+  convenience public init(_ block: (@escaping (Value) -> Swift.Void) -> Swift.Void)
+  convenience public init(on scheduler: any SignalCoreKit.Scheduler, _ block: @escaping (@escaping (Value) -> Swift.Void) -> Swift.Void)
+  final public func observe(on scheduler: (any SignalCoreKit.Scheduler)? = nil, block: @escaping (Swift.Result<Value, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+extension SignalCoreKit.Guarantee {
+  final public func wait() -> Value
+  final public func asVoid() -> SignalCoreKit.Guarantee<Swift.Void>
+}
+extension SignalCoreKit.Guarantee {
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func wrapAsync(_ block: @escaping () async -> Value) -> Self
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func awaitable() async -> Value
+  #endif
+}
+extension SignalCoreKit.Guarantee {
+  final public func map<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (Value) -> T) -> SignalCoreKit.Guarantee<T>
+  @discardableResult
+  final public func done(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (Value) -> Swift.Void) -> SignalCoreKit.Guarantee<Swift.Void>
+  @discardableResult
+  final public func then<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (Value) -> SignalCoreKit.Guarantee<T>) -> SignalCoreKit.Guarantee<T>
+}
+public struct GuaranteeFuture<Value> {
+  public var isSealed: Swift.Bool {
+    get
+  }
+  public func resolve(_ value: Value)
+  public func resolve<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, with thenable: T) where Value == T.Value, T : SignalCoreKit.Thenable
+}
+extension SignalCoreKit.GuaranteeFuture where Value == () {
+  public func resolve()
+}
+extension SignalCoreKit.Guarantee {
+  public static func race<T>(on scheduler: any SignalCoreKit.Scheduler, _ guarantees: SignalCoreKit.Guarantee<T>...) -> SignalCoreKit.Guarantee<T>
+  public static func race<T>(on scheduler: any SignalCoreKit.Scheduler, _ guarantees: [SignalCoreKit.Guarantee<T>]) -> SignalCoreKit.Guarantee<T>
+}
+extension SignalCoreKit.Guarantee {
+  final public func nilTimeout(on scheduler: any SignalCoreKit.Scheduler, seconds: Foundation.TimeInterval) -> SignalCoreKit.Guarantee<Value?>
+  final public func timeout(on scheduler: any SignalCoreKit.Scheduler, seconds: Foundation.TimeInterval, substituteValue: Value) -> SignalCoreKit.Guarantee<Value>
+}
+extension Foundation.Bundle {
+  @objc(appBundle) dynamic public var app: Foundation.Bundle {
+    @objc get
+  }
+}
+@inlinable public func OWSLocalizedString(_ key: Swift.String, tableName: Swift.String? = nil, value: Swift.String = "", comment: Swift.String) -> Swift.String {
+    return NSLocalizedString(key, tableName: tableName, bundle: .main.app, value: value, comment: comment)
+}
+public enum Logger {
+  public static func log(_ logString: @autoclosure () -> Swift.String, flag: CocoaLumberjack.DDLogFlag, file: Swift.String, function: Swift.String, line: Swift.Int)
+  public static func verbose(_ logString: @autoclosure () -> Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line)
+  public static func debug(_ logString: @autoclosure () -> Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line)
+  public static func info(_ logString: @autoclosure () -> Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line)
+  public static func warn(_ logString: @autoclosure () -> Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line)
+  public static func error(_ logString: @autoclosure () -> Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line)
+  public static func flush()
+}
+extension Foundation.NotificationCenter {
+  public func observe(once name: Foundation.Notification.Name, object: Any? = nil) -> SignalCoreKit.Guarantee<Foundation.Notification>
+}
+public func assertOnQueue(_ queue: Dispatch.DispatchQueue)
+@inlinable public func AssertIsOnMainThread(file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line) {
+    if !Thread.isMainThread {
+        owsFailDebug("Must be on main thread.", file: file, function: function, line: line)
+    }
+}
+@inlinable public func AssertNotOnMainThread(file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line) {
+    if Thread.isMainThread {
+        owsFailDebug("Must be off main thread.", file: file, function: function, line: line)
+    }
+}
+@inlinable public func owsFailDebug(_ logMessage: Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line) {
+    Logger.error(logMessage, file: file, function: function, line: line)
+    if IsDebuggerAttached() {
+        TrapDebugger()
+    } else {
+        assertionFailure(logMessage)
+    }
+}
+@inlinable public func owsFail(_ logMessage: Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line) -> Swift.Never {
+    logStackTrace()
+    owsFailDebug(logMessage, file: file, function: function, line: line)
+    Logger.flush()
+    fatalError(logMessage)
+}
+@inlinable public func owsAssertDebug(_ condition: Swift.Bool, _ message: @autoclosure () -> Swift.String = String(), file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line) {
+    if !condition {
+        let message: String = message()
+        owsFailDebug(message.isEmpty ? "Assertion failed." : message, file: file, function: function, line: line)
+    }
+}
+@inlinable public func owsAssert(_ condition: Swift.Bool, _ message: @autoclosure () -> Swift.String = String(), file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line) {
+    if !condition {
+        let message: String = message()
+        owsFail(message.isEmpty ? "Assertion failed." : message, file: file, function: function, line: line)
+    }
+}
+@_inheritsConvenienceInitializers @objc public class OWSSwiftUtils : ObjectiveC.NSObject {
+  @objc public class func owsFailObjC(_ logMessage: Swift.String, file: Swift.String = #fileID, function: Swift.String = #function, line: Swift.Int = #line) -> Swift.Never
+  @objc override dynamic public init()
+  @objc deinit
+}
+public func logStackTrace()
+public enum PromiseError : Swift.String, Swift.Error {
+  case cancelled
+  case whenResolvedRejected
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class Promise<Value> : SignalCoreKit.Thenable, SignalCoreKit.Catchable {
+  final public var result: Swift.Result<Value, any Swift.Error>? {
+    get
+  }
+  final public var isSealed: Swift.Bool {
+    get
+  }
+  public init(future: SignalCoreKit.Future<Value> = Future())
+  convenience public init()
+  public static func value(_ value: Value) -> Self
+  convenience public init(error: any Swift.Error)
+  convenience public init(_ block: (SignalCoreKit.Future<Value>) throws -> Swift.Void)
+  convenience public init(on scheduler: any SignalCoreKit.Scheduler, _ block: @escaping (SignalCoreKit.Future<Value>) throws -> Swift.Void)
+  final public func observe(on scheduler: (any SignalCoreKit.Scheduler)? = nil, block: @escaping (Swift.Result<Value, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+extension SignalCoreKit.Promise {
+  final public func wait() throws -> Value
+}
+extension SignalCoreKit.Promise {
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func wrapAsync(_ block: @escaping () async throws -> Value) -> Self
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func awaitable() async throws -> Value
+  #endif
+}
+extension SignalCoreKit.Promise {
+  final public class func pending() -> (SignalCoreKit.Promise<Value>, SignalCoreKit.Future<Value>)
+}
+extension SignalCoreKit.Guarantee {
+  final public func asPromise() -> SignalCoreKit.Promise<Value>
+}
+public protocol Scheduler {
+  func async(_ work: @escaping () -> Swift.Void)
+  func sync(_ work: () -> Swift.Void)
+  func sync<T>(_ work: () -> T) -> T
+  func sync<T>(_ work: () throws -> T) rethrows -> T
+  func asyncAfter(deadline: Dispatch.DispatchTime, _ work: @escaping () -> Swift.Void)
+  func asyncAfter(wallDeadline: Dispatch.DispatchWallTime, _ work: @escaping () -> Swift.Void)
+  func asyncIfNecessary(execute work: @escaping () -> Swift.Void)
+}
+extension SignalCoreKit.Scheduler {
+  public func async<T>(_ namespace: SignalCoreKit.PromiseNamespace, execute work: @escaping () -> T) -> SignalCoreKit.Guarantee<T>
+  public func async<T>(_ namespace: SignalCoreKit.PromiseNamespace, execute work: @escaping () throws -> T) -> SignalCoreKit.Promise<T>
+}
+extension Swift.Optional where Wrapped == any SignalCoreKit.Scheduler {
+  public func asyncIfNecessary(execute work: @escaping @convention(block) () -> Swift.Void)
+}
+@objc extension Foundation.NSString {
+  @objc dynamic public func ows_truncated(toByteCount byteCount: Swift.UInt) -> Foundation.NSString?
+  @objc dynamic public var ows_nilIfEmpty: Foundation.NSString? {
+    @objc get
+  }
+  @objc dynamic public var ows_strippedOrNil: Foundation.NSString? {
+    @objc get
+  }
+}
+extension Swift.String {
+  public var stripped: Swift.String {
+    get
+  }
+  public var strippedOrNil: Swift.String? {
+    get
+  }
+  public var nilIfEmpty: Swift.String? {
+    get
+  }
+  public var filterForDisplay: Swift.String {
+    get
+  }
+  public func safePrefix(_ maxLength: Swift.Int) -> Swift.String
+  public func truncated(toByteCount byteCount: Swift.UInt) -> Swift.String?
+  public func replaceCharacters(characterSet: Foundation.CharacterSet, replacement: Swift.String) -> Swift.String
+  public func removeCharacters(characterSet: Foundation.CharacterSet) -> Swift.String
+}
+extension Swift.Optional where Wrapped == Swift.String {
+  public var isEmptyOrNil: Swift.Bool {
+    get
+  }
+}
+@objc public class StringSanitizer : ObjectiveC.NSObject {
+  @objc(initWithString:) public init(_ string: Swift.String)
+  @objc public var needsSanitization: Swift.Bool {
+    @objc get
+  }
+  @objc public var sanitized: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+public class SyncScheduler : SignalCoreKit.Scheduler {
+  public init()
+  public func async(_ work: @escaping () -> Swift.Void)
+  public func sync(_ work: () -> Swift.Void)
+  public func sync<T>(_ work: () throws -> T) rethrows -> T
+  public func sync<T>(_ work: () -> T) -> T
+  public func asyncAfter(deadline: Dispatch.DispatchTime, _ work: @escaping () -> Swift.Void)
+  public func asyncAfter(wallDeadline: Dispatch.DispatchWallTime, _ work: @escaping () -> Swift.Void)
+  public func asyncIfNecessary(execute work: @escaping () -> Swift.Void)
+  @objc deinit
+}
+public protocol Thenable : AnyObject {
+  associatedtype Value
+  var result: Swift.Result<Self.Value, any Swift.Error>? { get }
+  init()
+  func observe(on scheduler: (any SignalCoreKit.Scheduler)?, block: @escaping (Swift.Result<Self.Value, any Swift.Error>) -> Swift.Void)
+}
+extension SignalCoreKit.Thenable {
+  public func map<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (Self.Value) throws -> T) -> SignalCoreKit.Promise<T>
+  public func done(on queue: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (Self.Value) throws -> Swift.Void) -> SignalCoreKit.Promise<Swift.Void>
+  public func then<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ block: @escaping (Self.Value) throws -> T) -> SignalCoreKit.Promise<T.Value> where T : SignalCoreKit.Thenable
+  public var value: Self.Value? {
+    get
+  }
+  public func asVoid(on scheduler: (any SignalCoreKit.Scheduler)? = nil) -> SignalCoreKit.Promise<Swift.Void>
+}
+extension SignalCoreKit.Guarantee where Value == () {
+  public static func after(on scheduler: (any SignalCoreKit.Scheduler)? = nil, seconds: Foundation.TimeInterval) -> SignalCoreKit.Guarantee<Swift.Void>
+  public static func after(on scheduler: (any SignalCoreKit.Scheduler)? = nil, wallInterval: Foundation.TimeInterval) -> SignalCoreKit.Guarantee<Swift.Void>
+}
+extension SignalCoreKit.Thenable {
+  public static func race<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ thenables: T...) -> SignalCoreKit.Promise<T.Value> where T : SignalCoreKit.Thenable, Self.Value == T.Value
+  public static func race<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, _ thenables: [T]) -> SignalCoreKit.Promise<T.Value> where T : SignalCoreKit.Thenable, Self.Value == T.Value
+}
+extension SignalCoreKit.Thenable {
+  public func nilTimeout(on scheduler: (any SignalCoreKit.Scheduler)? = nil, seconds: Foundation.TimeInterval) -> SignalCoreKit.Promise<Self.Value?>
+  public func timeout(on scheduler: (any SignalCoreKit.Scheduler)? = nil, seconds: Foundation.TimeInterval, substituteValue: Self.Value) -> SignalCoreKit.Promise<Self.Value>
+}
+extension SignalCoreKit.Promise {
+  final public func timeout(on scheduler: (any SignalCoreKit.Scheduler)? = nil, seconds: Foundation.TimeInterval, ticksWhileSuspended: Swift.Bool = false, description: Swift.String? = nil, timeoutErrorBlock: @escaping () -> any Swift.Error) -> SignalCoreKit.Promise<Value>
+}
+extension SignalCoreKit.Thenable where Self.Value == () {
+  public func timeout(on scheduler: (any SignalCoreKit.Scheduler)? = nil, seconds: Foundation.TimeInterval) -> SignalCoreKit.Promise<Swift.Void>
+}
+extension SignalCoreKit.Thenable {
+  public static func when<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, fulfilled thenables: [T]) -> SignalCoreKit.Promise<[Self.Value]> where T : SignalCoreKit.Thenable, Self.Value == T.Value
+  public static func when<T, U>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, fulfilled tt: T, _ tu: U) -> SignalCoreKit.Promise<(T.Value, U.Value)> where T : SignalCoreKit.Thenable, U : SignalCoreKit.Thenable, Self.Value == T.Value
+  public static func when<T, U, V>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, fulfilled tt: T, _ tu: U, _ tv: V) -> SignalCoreKit.Promise<(T.Value, U.Value, V.Value)> where T : SignalCoreKit.Thenable, U : SignalCoreKit.Thenable, V : SignalCoreKit.Thenable, Self.Value == T.Value
+  public static func when<T, U, V, W>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, fulfilled tt: T, _ tu: U, _ tv: V, _ tw: W) -> SignalCoreKit.Promise<(T.Value, U.Value, V.Value, W.Value)> where T : SignalCoreKit.Thenable, U : SignalCoreKit.Thenable, V : SignalCoreKit.Thenable, W : SignalCoreKit.Thenable, Self.Value == T.Value
+}
+extension SignalCoreKit.Thenable where Self.Value == () {
+  public static func when<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, fulfilled thenables: T...) -> SignalCoreKit.Promise<Swift.Void> where T : SignalCoreKit.Thenable
+  public static func when<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, fulfilled thenables: [T]) -> SignalCoreKit.Promise<Swift.Void> where T : SignalCoreKit.Thenable
+}
+extension SignalCoreKit.Thenable {
+  public static func when<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, resolved thenables: T...) -> SignalCoreKit.Guarantee<[Swift.Result<Self.Value, any Swift.Error>]> where T : SignalCoreKit.Thenable, Self.Value == T.Value
+  public static func when<T>(on scheduler: (any SignalCoreKit.Scheduler)? = nil, resolved thenables: [T]) -> SignalCoreKit.Guarantee<[Swift.Result<Self.Value, any Swift.Error>]> where T : SignalCoreKit.Thenable, Self.Value == T.Value
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public static func animate(_: SignalCoreKit.PromiseNamespace, duration: Foundation.TimeInterval, delay: Foundation.TimeInterval = 0, options: UIKit.UIView.AnimationOptions = [], animations: @escaping () -> Swift.Void) -> SignalCoreKit.Guarantee<Swift.Bool>
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public static func animate(_: SignalCoreKit.PromiseNamespace, duration: Foundation.TimeInterval, delay: Foundation.TimeInterval, usingSpringWithDamping damping: CoreFoundation.CGFloat, initialSpringVelocity: CoreFoundation.CGFloat, options: UIKit.UIView.AnimationOptions = [], animations: @escaping () -> Swift.Void) -> SignalCoreKit.Guarantee<Swift.Bool>
+}
+extension SignalCoreKit.UnfairLock {
+  @available(swift, obsoleted: 1.0)
+  @objc final public func withLockObjc(_ criticalSection: () -> Swift.Void)
+  final public func withLock<T>(_ criticalSection: () throws -> T) rethrows -> T
+  @discardableResult
+  final public func tryWithLock(_ criticalSection: () throws -> Swift.Void) rethrows -> Swift.Bool
+  @discardableResult
+  final public func tryWithLock<T>(_ criticalSection: () throws -> T) rethrows -> T?
+}
+extension SignalCoreKit.PromiseNamespace : Swift.Equatable {}
+extension SignalCoreKit.PromiseNamespace : Swift.Hashable {}
+extension SignalCoreKit.PromiseError : Swift.Equatable {}
+extension SignalCoreKit.PromiseError : Swift.Hashable {}
+extension SignalCoreKit.PromiseError : Swift.RawRepresentable {}

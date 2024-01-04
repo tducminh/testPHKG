@@ -13,9 +13,17 @@
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\Simulator\Encryption.framework">
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\Encryption.framework">
       <Kind>Framework</Kind>
-      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\CocoaLumberjack\CocoaLumberjack.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\LibSignalClient\LibSignalClient.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\SignalCoreKit\SignalCoreKit.framework">
+      <Kind>Framework</Kind>
     </NativeReference>
   </ItemGroup>
 </Project>

@@ -1,0 +1,11 @@
+framework module LibSignalClient {
+  umbrella header "LibSignalClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module LibSignalClient.Swift {
+  header "LibSignalClient-Swift.h"
+  requires objc
+}

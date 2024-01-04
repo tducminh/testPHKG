@@ -47,8 +47,8 @@ namespace iosEncryption
 
         // @required -(NSString * _Nonnull)logoutWithToken:(NSString * _Nonnull)token __attribute__((warn_unused_result("")));
         [Abstract]
-        [Export("logoutWithToken:")]
-        string Logout(string token);
+        [Export("logout")]
+        string Logout { get; }
     }
 
     // @interface Encryption : NSObject <EncryptionProtocol>
@@ -92,8 +92,8 @@ namespace iosEncryption
         string Restore(string token);
 
         // -(NSString * _Nonnull)logoutWithToken:(NSString * _Nonnull)token __attribute__((warn_unused_result("")));
-        [Export("logoutWithToken:")]
-        string Logout(string token);
+        [Export("logout")]
+        string Logout { get; }
     }
 
     // @interface SDKDataResponse : NSObject
@@ -113,4 +113,3 @@ namespace iosEncryption
         string error { get; set; }
     }
 }
-
