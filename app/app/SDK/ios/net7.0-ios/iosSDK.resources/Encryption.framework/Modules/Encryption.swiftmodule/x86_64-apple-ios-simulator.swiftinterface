@@ -20,6 +20,10 @@ import _SwiftConcurrencyShims
 import os.log
 import os
 @objc @_inheritsConvenienceInitializers @objcMembers public class SDKDataResponse : ObjectiveC.NSObject {
+  @objc public var data: Foundation.Data?
+  @objc public var token: Swift.String?
+  @objc public var status: Swift.String?
+  @objc public var error: Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }

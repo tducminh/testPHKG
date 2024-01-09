@@ -1,14 +1,4 @@
 ﻿<BindingAssembly>
-	<NativeReference Name="Encryption.framework">
-		<ForceLoad></ForceLoad>
-		<Frameworks></Frameworks>
-		<IsCxx></IsCxx>
-		<Kind>Framework</Kind>
-		<LinkerFlags></LinkerFlags>
-		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
-		<SmartLink></SmartLink>
-		<WeakFrameworks></WeakFrameworks>
-	</NativeReference>
 	<NativeReference Name="CocoaLumberjack.framework">
 		<ForceLoad></ForceLoad>
 		<Frameworks></Frameworks>
@@ -30,6 +20,16 @@
 		<WeakFrameworks></WeakFrameworks>
 	</NativeReference>
 	<NativeReference Name="SignalCoreKit.framework">
+		<ForceLoad></ForceLoad>
+		<Frameworks></Frameworks>
+		<IsCxx></IsCxx>
+		<Kind>Framework</Kind>
+		<LinkerFlags></LinkerFlags>
+		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
+		<SmartLink></SmartLink>
+		<WeakFrameworks></WeakFrameworks>
+	</NativeReference>
+	<NativeReference Name="Encryption.framework">
 		<ForceLoad></ForceLoad>
 		<Frameworks></Frameworks>
 		<IsCxx></IsCxx>

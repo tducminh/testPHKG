@@ -78,6 +78,474 @@
         "printedName": "SDKDataResponse",
         "children": [
           {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(py)data",
+            "mangledName": "$s10Encryption15SDKDataResponseC4data10Foundation4DataVSgvp",
+            "moduleName": "Encryption",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)data",
+                "mangledName": "$s10Encryption15SDKDataResponseC4data10Foundation4DataVSgvg",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)setData:",
+                "mangledName": "$s10Encryption15SDKDataResponseC4data10Foundation4DataVSgvs",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Encryption15SDKDataResponseC4data10Foundation4DataVSgvM",
+                "mangledName": "$s10Encryption15SDKDataResponseC4data10Foundation4DataVSgvM",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "token",
+            "printedName": "token",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(py)token",
+            "mangledName": "$s10Encryption15SDKDataResponseC5tokenSSSgvp",
+            "moduleName": "Encryption",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)token",
+                "mangledName": "$s10Encryption15SDKDataResponseC5tokenSSSgvg",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)setToken:",
+                "mangledName": "$s10Encryption15SDKDataResponseC5tokenSSSgvs",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Encryption15SDKDataResponseC5tokenSSSgvM",
+                "mangledName": "$s10Encryption15SDKDataResponseC5tokenSSSgvM",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(py)status",
+            "mangledName": "$s10Encryption15SDKDataResponseC6statusSSSgvp",
+            "moduleName": "Encryption",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)status",
+                "mangledName": "$s10Encryption15SDKDataResponseC6statusSSSgvg",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)setStatus:",
+                "mangledName": "$s10Encryption15SDKDataResponseC6statusSSSgvs",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Encryption15SDKDataResponseC6statusSSSgvM",
+                "mangledName": "$s10Encryption15SDKDataResponseC6statusSSSgvM",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(py)error",
+            "mangledName": "$s10Encryption15SDKDataResponseC5errorSSSgvp",
+            "moduleName": "Encryption",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)error",
+                "mangledName": "$s10Encryption15SDKDataResponseC5errorSSSgvg",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Encryption@objc(cs)SDKDataResponse(im)setError:",
+                "mangledName": "$s10Encryption15SDKDataResponseC5errorSSSgvs",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Encryption15SDKDataResponseC5errorSSSgvM",
+                "mangledName": "$s10Encryption15SDKDataResponseC5errorSSSgvM",
+                "moduleName": "Encryption",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -219,6 +687,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Encryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Encryption"
       },
       {
         "kind": "Import",
@@ -2610,13 +3095,6 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "Encryption"
-      },
-      {
-        "kind": "Import",
         "name": "os.log",
         "printedName": "os.log",
         "declKind": "Import",
@@ -4939,6 +5417,23 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Encryption"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Encryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
         "declKind": "Import",
         "moduleName": "Encryption"
       },
@@ -43196,8 +43691,22 @@
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
       "kind": "StringLiteral",
       "offset": 1145,
+      "length": 10,
+      "value": "\"group_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1179,
       "length": 9,
       "value": "\"created\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1213,
+      "length": 10,
+      "value": "\"modified\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
@@ -43266,8 +43775,22 @@
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
       "kind": "StringLiteral",
       "offset": 1145,
+      "length": 10,
+      "value": "\"group_id\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1179,
       "length": 9,
       "value": "\"created\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Data\/DTO\/Attachment\/Response\/AttachmentInfoResponseDto.swift",
+      "kind": "StringLiteral",
+      "offset": 1213,
+      "length": 10,
+      "value": "\"modified\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Auth\/RemoteAuthRepository.swift",
@@ -46520,140 +47043,133 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 2566,
+      "offset": 2615,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 3084,
+      "offset": 3133,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 3177,
+      "offset": 3226,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 3743,
+      "offset": 3792,
       "length": 20,
       "value": "\"Message not found!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 3830,
+      "offset": 3879,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 3923,
+      "offset": 3972,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 4581,
+      "offset": 4498,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 4674,
+      "offset": 4591,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 5263,
+      "offset": 5150,
       "length": 17,
       "value": "\"File not found!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 5506,
-      "length": 17,
-      "value": "\"File not found!\""
-    },
-    {
-      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
-      "kind": "StringLiteral",
-      "offset": 6338,
+      "offset": 5980,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 6948,
+      "offset": 6500,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 7639,
+      "offset": 6593,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 8113,
+      "offset": 7067,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 8206,
+      "offset": 7160,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 8694,
+      "offset": 7648,
       "length": 33,
       "value": "\"Cannot find any backup version!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 9113,
+      "offset": 8067,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 9206,
+      "offset": 8160,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 9686,
+      "offset": 8680,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Encryption.swift",
       "kind": "StringLiteral",
-      "offset": 9779,
+      "offset": 8773,
       "length": 2,
       "value": "\"\""
     },
@@ -50209,56 +50725,56 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14473,
+      "offset": 14548,
       "length": 23,
       "value": "\"Cannote decrypt file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14517,
+      "offset": 14592,
       "length": 22,
       "value": "\"Cannot decrypt file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14654,
+      "offset": 14729,
       "length": 22,
       "value": "\"Can not create file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14697,
+      "offset": 14772,
       "length": 22,
       "value": "\"Can not create file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14822,
+      "offset": 14897,
       "length": 24,
       "value": "\"File exceeds capacity!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14867,
+      "offset": 14942,
       "length": 24,
       "value": "\"File exceeds capacity!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 14993,
+      "offset": 15068,
       "length": 26,
       "value": "\"Cannot delete this file!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/FileUtils.swift",
       "kind": "StringLiteral",
-      "offset": 15040,
+      "offset": 15115,
       "length": 26,
       "value": "\"Cannot delete this file!\""
     },
@@ -52771,119 +53287,98 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "StringLiteral",
-      "offset": 391,
+      "offset": 376,
       "length": 43,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "StringLiteral",
-      "offset": 406,
+      "offset": 391,
       "length": 1,
       "value": "\":\/\/\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "StringLiteral",
-      "offset": 421,
+      "offset": 406,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "StringLiteral",
-      "offset": 433,
+      "offset": 418,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 493,
+      "offset": 478,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 1739,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
-      "kind": "StringLiteral",
-      "offset": 2182,
-      "length": 53,
-      "value": "\"Remote request error: \""
-    },
-    {
-      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
-      "kind": "StringLiteral",
-      "offset": 2234,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2530,
+      "offset": 1724,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "IntegerLiteral",
-      "offset": 2770,
+      "offset": 1964,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 4077,
+      "offset": 3271,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "IntegerLiteral",
-      "offset": 4313,
+      "offset": 3507,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 5469,
+      "offset": 4663,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "IntegerLiteral",
-      "offset": 5671,
+      "offset": 4865,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/RemoteRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 7600,
+      "offset": 6045,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/PublishSDK\/PermissionSDK.swift",
       "kind": "StringLiteral",
-      "offset": 453,
+      "offset": 423,
       "length": 20,
       "value": "\"Message not found!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/PublishSDK\/PermissionSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 1377,
+      "offset": 1104,
       "length": 5,
       "value": "false"
     },
@@ -53544,6 +54039,13 @@
       "offset": 4350,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/PublishSDK\/FileSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 7261,
+      "length": 17,
+      "value": "\"File not found!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Domain\/Interactor\/GroupInteractor.swift",
@@ -58047,6 +58549,27 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/PublishSDK\/TimerSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 622,
+      "length": 15,
+      "value": "\"Restore timer\""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/PublishSDK\/TimerSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 645,
+      "length": 50,
+      "value": "\"Error auto backup: \""
+    },
+    {
+      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/PublishSDK\/TimerSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 694,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Utilities\/RegistrationUtils.swift",
       "kind": "StringLiteral",
       "offset": 459,
@@ -62522,63 +63045,63 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 1526,
+      "offset": 1805,
       "length": 17,
       "value": "\"\/file\/read.json\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 1569,
+      "offset": 1848,
       "length": 16,
       "value": "\"\/file\/get.json\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 1614,
-      "length": 18,
-      "value": "\"file\/delete.json\""
+      "offset": 1893,
+      "length": 19,
+      "value": "\"\/file\/delete.json\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 2466,
+      "offset": 2746,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "BooleanLiteral",
-      "offset": 2567,
+      "offset": 2847,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 2843,
+      "offset": 3123,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 3054,
+      "offset": 3334,
       "length": 10,
       "value": "\"group_id\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 3096,
+      "offset": 3376,
       "length": 15,
       "value": "\"attachment_id\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Repositories\/Attachment\/RemoteAttachmentRepository.swift",
       "kind": "StringLiteral",
-      "offset": 3142,
+      "offset": 3422,
       "length": 14,
       "value": "\"access_token\""
     },
@@ -68409,448 +68932,441 @@
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 1964,
+      "offset": 1909,
       "length": 13,
       "value": "\"Invalid URL\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2019,
+      "offset": 1964,
       "length": 31,
       "value": "\"Unexpected HTTP code: \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2049,
+      "offset": 1994,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2092,
+      "offset": 2037,
       "length": 37,
       "value": "\"Unexpected response from the server\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2168,
-      "length": 22,
-      "value": "\"Unable to load image\""
-    },
-    {
-      "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
-      "kind": "StringLiteral",
-      "offset": 2248,
+      "offset": 2132,
       "length": 45,
       "value": "\"Unexpected HTTP error: \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2279,
+      "offset": 2163,
       "length": 1,
       "value": "\" : \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2292,
+      "offset": 2176,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2328,
+      "offset": 2212,
       "length": 47,
       "value": "\"Unauthorized error, please gain access token!\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2904,
+      "offset": 2783,
       "length": 28,
       "value": "\"Parse json fail: \""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 2931,
+      "offset": 2810,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "IntegerLiteral",
-      "offset": 3298,
+      "offset": 3177,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 4958,
+      "offset": 4837,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 4969,
+      "offset": 4848,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 5145,
+      "offset": 5024,
       "length": 43,
       "value": "\"multipart\/form-data; boundary=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 5187,
+      "offset": 5066,
       "length": 48,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "IntegerLiteral",
-      "offset": 5628,
+      "offset": 5507,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "IntegerLiteral",
-      "offset": 5636,
+      "offset": 5515,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 5887,
+      "offset": 5766,
       "length": 6,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6098,
+      "offset": 5977,
       "length": 14,
       "value": "\"octet-stream\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6203,
+      "offset": 6082,
       "length": 5,
       "value": "\"zip\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6248,
+      "offset": 6127,
       "length": 5,
       "value": "\"zip\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6279,
+      "offset": 6158,
       "length": 4,
       "value": "\"gz\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6323,
+      "offset": 6202,
       "length": 6,
       "value": "\"gzip\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6397,
+      "offset": 6276,
       "length": 14,
       "value": "\"octet-stream\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6532,
+      "offset": 6411,
       "length": 19,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6546,
+      "offset": 6425,
       "length": 1,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6620,
+      "offset": 6499,
       "length": 106,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6655,
+      "offset": 6534,
       "length": 1,
       "value": "\": form-data; name=\"file\"; filename=\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 6723,
+      "offset": 6602,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7010,
+      "offset": 6889,
       "length": 56,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7038,
+      "offset": 6917,
       "length": 1,
       "value": "\":application\/\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7065,
+      "offset": 6944,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7172,
+      "offset": 7051,
       "length": 50,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7213,
+      "offset": 7092,
       "length": 1,
       "value": "\": binary\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7469,
+      "offset": 7348,
       "length": 15,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7483,
+      "offset": 7362,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7590,
+      "offset": 7469,
       "length": 64,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7625,
+      "offset": 7504,
       "length": 1,
       "value": "\": form-data; name=\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7651,
+      "offset": 7530,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7760,
+      "offset": 7639,
       "length": 78,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7788,
+      "offset": 7667,
       "length": 1,
       "value": "\":text\/plain; charset=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7837,
+      "offset": 7716,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7981,
+      "offset": 7860,
       "length": 10,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 7990,
+      "offset": 7869,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8130,
+      "offset": 8009,
       "length": 17,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8144,
+      "offset": 8023,
       "length": 2,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8611,
+      "offset": 8490,
       "length": 14,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8624,
+      "offset": 8503,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8697,
+      "offset": 8576,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8735,
+      "offset": 8614,
       "length": 16,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8750,
+      "offset": 8629,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8823,
+      "offset": 8702,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8862,
+      "offset": 8741,
       "length": 3,
       "value": "\"=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 8926,
+      "offset": 8805,
       "length": 3,
       "value": "\"&\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9069,
+      "offset": 8948,
       "length": 14,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9082,
+      "offset": 8961,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9155,
+      "offset": 9034,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9193,
+      "offset": 9072,
       "length": 16,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9208,
+      "offset": 9087,
       "length": 74,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9281,
+      "offset": 9160,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9320,
+      "offset": 9199,
       "length": 3,
       "value": "\"=\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9384,
+      "offset": 9263,
       "length": 3,
       "value": "\"&\""
     },
     {
       "filePath": "\/Users\/ducnv\/Workspace\/e2eiossdk\/Encryption\/Core\/Api\/APICall.swift",
       "kind": "StringLiteral",
-      "offset": 9423,
+      "offset": 9302,
       "length": 2,
       "value": "\"\""
     },
