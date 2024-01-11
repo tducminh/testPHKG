@@ -4,16 +4,26 @@ This library encryption E2EE for mobile
 
 ## II. Change log
 
+##### Change log 1.0.9:
+1. Android `update response`
+
+##### Change log 1.0.8:
+1. iOS `fix and optimize`
+##### Change log 1.0.7:
+1. iOS `fix and optimize`
+##### Change log 1.0.6:
+1. iOS `Delete File`
+
 ##### Change log 1.0.5:
 1. iOS  `Login`
 2. iOS  `Logout`
-2. iOS  `Send Text`
-3. iOS  `Get Text`
-4. iOS  `Send File`
-5. iOS  `Get File`
-6. iOS  `Update Permission`
-7. iOS  `Backup`
-8. iOS  `Restore`
+3. iOS  `Send Text`
+4. iOS  `Get Text`
+5. iOS  `Send File`
+6. iOS  `Get File`
+7. iOS  `Update Permission`
+9. iOS  `Backup`
+9. iOS  `Restore`
 
 ##### Change log 1.0.4:
 1. Android `DeleteFile`
@@ -233,7 +243,7 @@ private void GetFile()
         string thirdPartyId = "978f6e2a12b4406fbbab4def8c2f9100";
 
         DataResponse response = sdk.GetFile(token, thirdPartyId);
-        int code = response.Code;
+        int status = response.Status;
         string msg = response.Message;
         byte[] bytes = response.GetData();
     }

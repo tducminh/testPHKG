@@ -41,7 +41,7 @@ namespace sdk
         {
             DataResponse response = sdk.GetFile(token, thirdPartyId);
 
-            int code = response.Code;
+            int status = response.Status;
             string msg = response.Message;
             byte[] bytes = response.GetData();
 
