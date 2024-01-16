@@ -785,7 +785,7 @@ SWIFT_CLASS_NAMED("OneTimePreKeysMO")
 SWIFT_CLASS("_TtC10Encryption15SDKDataResponse")
 @interface SDKDataResponse : NSObject
 @property (nonatomic, copy) NSData * _Nullable data;
-@property (nonatomic, copy) NSString * _Nullable token;
+@property (nonatomic, copy) NSString * _Nullable message;
 @property (nonatomic, copy) NSString * _Nullable status;
 @property (nonatomic, copy) NSString * _Nullable error;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

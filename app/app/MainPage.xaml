@@ -10,11 +10,56 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+
             <Label
                 Text="Hello, World!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
+
+            <Editor x:Name="edtAccount"
+                Placeholder="Enter your account: "
+                AutoSize="TextChanges"/>
+
+            <Editor x:Name="edtReceiveAccount"
+                Placeholder="Send to account: "
+                AutoSize="TextChanges"/>
+
+            <Editor x:Name="edtGetId"
+                Placeholder="Enter third party id for get text/file: "
+                AutoSize="TextChanges"/>
+
+            <HorizontalStackLayout>
+                <Label
+                Text="Uuid: "
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Generated uuid: "
+                FontSize="14"
+                HorizontalOptions="Start" />
+                <Label
+                x:Name="LabelSendId"
+                Text="Uuid"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Send uuid generated after send text/file: "
+                FontSize="14"
+                HorizontalOptions="End" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                Text="Token: "
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Uid:"
+                FontSize="14"
+                HorizontalOptions="Start" />
+                <Label
+                x:Name="labelToken"
+                Text="Check token exist:"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Token exist"
+                FontSize="14"
+                HorizontalOptions="Center" />
+            </HorizontalStackLayout>
 
             <Label
                  x:Name="LabelContent"
@@ -24,13 +69,69 @@
                 FontSize="11"
                 HorizontalOptions="Center" />
 
-            <Button
+            <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                <Button
                 x:Name="btnFuncTest"
-                Text="Func sdk test"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="FunctionSDKTest"
+                Text="Token"
+                SemanticProperties.Hint="Show token if existing"
+                Clicked="CheckTokenExist"
                 HorizontalOptions="Center" />
 
+                <Button
+                x:Name="btnCheckAccount"
+                Text="Check account"
+                SemanticProperties.Hint="Show account if existing"
+                Clicked="CheckAccountExist"
+                HorizontalOptions="Center" />
+
+            </FlexLayout>
+
+            <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+
+                <Button
+                x:Name="btnLogin"
+                Text="Test login"
+                SemanticProperties.Hint="Login SDK"
+                Clicked="SDKLogin"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="btnLogout"
+                Text="Test logout"
+                SemanticProperties.Hint="Logout SDK"
+                Clicked="SDKLogout"
+                HorizontalOptions="Center" />
+
+            </FlexLayout>
+
+            <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                <Button
+                x:Name="btnSendText"
+                Text="Send text test"
+                SemanticProperties.Hint="Send text"
+                Clicked="SDKSendText" />
+
+                <Button
+                x:Name="btnGetText"
+                Text="Get text test"
+                SemanticProperties.Hint="Get text"
+                Clicked="SDKGetText" />
+            </FlexLayout>
+
+
+            <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                <Button
+                x:Name="btnSendFile"
+                Text="Send file test"
+                SemanticProperties.Hint="Send file"
+                Clicked="SDKSendFile" />
+
+            <Button
+                x:Name="btnGetFile"
+                Text="Get file test"
+                SemanticProperties.Hint="Get file"
+                Clicked="SDKGetFile" />
+            </FlexLayout>
 
         </VerticalStackLayout>
         

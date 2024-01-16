@@ -45,7 +45,7 @@ namespace sdk
             string msg = response.Message;
             byte[] bytes = response.GetData();
 
-            return "";
+            return Convert.ToBase64String(bytes);
         }
 
         public partial string DeleteFile(string token, string thirdPartyId)

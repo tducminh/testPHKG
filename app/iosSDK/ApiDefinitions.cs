@@ -103,8 +103,8 @@ namespace iosEncryption
         [NullAllowed, Export("data")]
         NSData data { get; set; }
 
-        [NullAllowed, Export("token")]
-        string token { get; set; }
+        [NullAllowed, Export("message")]
+        string message { get; set; }
 
         [NullAllowed, Export("status")]
         string status { get; set; }

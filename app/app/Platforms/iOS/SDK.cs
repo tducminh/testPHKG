@@ -51,7 +51,7 @@ namespace sdk
             byte[] dataBytes = new byte[data.Length];
             System.Runtime.InteropServices.Marshal.Copy(data.Bytes, dataBytes, 0, Convert.ToInt32(data.Length));
 
-            return "";
+            return Convert.ToBase64String(dataBytes);
         }
 
         public partial string DeleteFile(string token, string thirdPartyId)

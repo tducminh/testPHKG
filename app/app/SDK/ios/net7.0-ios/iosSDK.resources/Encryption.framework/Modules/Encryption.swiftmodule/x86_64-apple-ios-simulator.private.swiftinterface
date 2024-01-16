@@ -24,6 +24,7 @@ import os
   @objc public var token: Swift.String?
   @objc public var status: Swift.String?
   @objc public var error: Swift.String?
+  @objc public var message: Swift.String
   @objc override dynamic public init()
   @objc deinit
 }
