@@ -1,0 +1,780 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LibSignalClient
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+@_exported import LibSignalClient
+import Security
+import SignalCoreKit
+import SignalFfi
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ProtocolAddress : LibSignalClient.ClonableHandleOwner {
+  convenience public init(accountId: Swift.String, deviceId: Swift.String) throws
+  public var accountId: Swift.String {
+    get
+  }
+  public var deviceId: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension LibSignalClient.ProtocolAddress : Swift.Hashable {
+  public static func == (lhs: LibSignalClient.ProtocolAddress, rhs: LibSignalClient.ProtocolAddress) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Aes256GcmSiv : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(_ bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public func encrypt<MessageBytes, NonceBytes, AssociatedDataBytes>(_ message: MessageBytes, _ nonce: NonceBytes, _ associated_data: AssociatedDataBytes) throws -> [Swift.UInt8] where MessageBytes : Foundation.ContiguousBytes, NonceBytes : Foundation.ContiguousBytes, AssociatedDataBytes : Foundation.ContiguousBytes
+  public func decrypt<MessageBytes, NonceBytes, AssociatedDataBytes>(_ message: MessageBytes, _ nonce: NonceBytes, _ associated_data: AssociatedDataBytes) throws -> [Swift.UInt8] where MessageBytes : Foundation.ContiguousBytes, NonceBytes : Foundation.ContiguousBytes, AssociatedDataBytes : Foundation.ContiguousBytes
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AuthCredential : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AuthCredentialPresentation : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getUuidCiphertext() throws -> LibSignalClient.UuidCiphertext
+  public func getRedemptionTime() throws -> Swift.UInt32
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AuthCredentialResponse : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ByteArray {
+  public func serialize() -> [Swift.UInt8]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CiphertextMessage : LibSignalClient.NativeHandleOwner {
+  public struct MessageType : Swift.RawRepresentable, Swift.Hashable {
+    public var rawValue: Swift.UInt8
+    public init(rawValue: Swift.UInt8)
+    public static var whisper: LibSignalClient.CiphertextMessage.MessageType {
+      get
+    }
+    public static var preKey: LibSignalClient.CiphertextMessage.MessageType {
+      get
+    }
+    public static var senderKey: LibSignalClient.CiphertextMessage.MessageType {
+      get
+    }
+    public static var plaintext: LibSignalClient.CiphertextMessage.MessageType {
+      get
+    }
+    public typealias RawValue = Swift.UInt8
+  }
+  convenience public init(_ plaintextContent: LibSignalClient.PlaintextContent)
+  public func serialize() -> [Swift.UInt8]
+  public var messageType: LibSignalClient.CiphertextMessage.MessageType {
+    get
+  }
+  @objc deinit
+}
+public class ClientZkAuthOperations {
+  public init(serverPublicParams: LibSignalClient.ServerPublicParams)
+  public func receiveAuthCredential(uuid: Foundation.UUID, redemptionTime: Swift.UInt32, authCredentialResponse: LibSignalClient.AuthCredentialResponse) throws -> LibSignalClient.AuthCredential
+  public func createAuthCredentialPresentation(groupSecretParams: LibSignalClient.GroupSecretParams, authCredential: LibSignalClient.AuthCredential) throws -> LibSignalClient.AuthCredentialPresentation
+  public func createAuthCredentialPresentation(randomness: LibSignalClient.Randomness, groupSecretParams: LibSignalClient.GroupSecretParams, authCredential: LibSignalClient.AuthCredential) throws -> LibSignalClient.AuthCredentialPresentation
+  @objc deinit
+}
+public class ClientZkGroupCipher {
+  public init(groupSecretParams: LibSignalClient.GroupSecretParams)
+  public func encryptUuid(uuid: Foundation.UUID) throws -> LibSignalClient.UuidCiphertext
+  public func decryptUuid(uuidCiphertext: LibSignalClient.UuidCiphertext) throws -> Foundation.UUID
+  public func encryptProfileKey(profileKey: LibSignalClient.ProfileKey, uuid: Foundation.UUID) throws -> LibSignalClient.ProfileKeyCiphertext
+  public func decryptProfileKey(profileKeyCiphertext: LibSignalClient.ProfileKeyCiphertext, uuid: Foundation.UUID) throws -> LibSignalClient.ProfileKey
+  public func encryptBlob(plaintext: [Swift.UInt8]) throws -> [Swift.UInt8]
+  public func encryptBlob(randomness: LibSignalClient.Randomness, plaintext: [Swift.UInt8]) throws -> [Swift.UInt8]
+  public func decryptBlob(blobCiphertext: [Swift.UInt8]) throws -> [Swift.UInt8]
+  @objc deinit
+}
+public class ClientZkProfileOperations {
+  public init(serverPublicParams: LibSignalClient.ServerPublicParams)
+  public func createProfileKeyCredentialRequestContext(uuid: Foundation.UUID, profileKey: LibSignalClient.ProfileKey) throws -> LibSignalClient.ProfileKeyCredentialRequestContext
+  public func createProfileKeyCredentialRequestContext(randomness: LibSignalClient.Randomness, uuid: Foundation.UUID, profileKey: LibSignalClient.ProfileKey) throws -> LibSignalClient.ProfileKeyCredentialRequestContext
+  public func createPniCredentialRequestContext(aci: Foundation.UUID, pni: Foundation.UUID, profileKey: LibSignalClient.ProfileKey) throws -> LibSignalClient.PniCredentialRequestContext
+  public func createPniCredentialRequestContext(randomness: LibSignalClient.Randomness, aci: Foundation.UUID, pni: Foundation.UUID, profileKey: LibSignalClient.ProfileKey) throws -> LibSignalClient.PniCredentialRequestContext
+  public func receiveProfileKeyCredential(profileKeyCredentialRequestContext: LibSignalClient.ProfileKeyCredentialRequestContext, profileKeyCredentialResponse: LibSignalClient.ProfileKeyCredentialResponse) throws -> LibSignalClient.ProfileKeyCredential
+  public func receivePniCredential(requestContext: LibSignalClient.PniCredentialRequestContext, response: LibSignalClient.PniCredentialResponse) throws -> LibSignalClient.PniCredential
+  public func createProfileKeyCredentialPresentation(groupSecretParams: LibSignalClient.GroupSecretParams, profileKeyCredential: LibSignalClient.ProfileKeyCredential) throws -> LibSignalClient.ProfileKeyCredentialPresentation
+  public func createProfileKeyCredentialPresentation(randomness: LibSignalClient.Randomness, groupSecretParams: LibSignalClient.GroupSecretParams, profileKeyCredential: LibSignalClient.ProfileKeyCredential) throws -> LibSignalClient.ProfileKeyCredentialPresentation
+  public func createPniCredentialPresentation(groupSecretParams: LibSignalClient.GroupSecretParams, credential: LibSignalClient.PniCredential) throws -> LibSignalClient.PniCredentialPresentation
+  public func createPniCredentialPresentation(randomness: LibSignalClient.Randomness, groupSecretParams: LibSignalClient.GroupSecretParams, credential: LibSignalClient.PniCredential) throws -> LibSignalClient.PniCredentialPresentation
+  @objc deinit
+}
+public class ClientZkReceiptOperations {
+  public init(serverPublicParams: LibSignalClient.ServerPublicParams)
+  public func createReceiptCredentialRequestContext(receiptSerial: LibSignalClient.ReceiptSerial) throws -> LibSignalClient.ReceiptCredentialRequestContext
+  public func createReceiptCredentialRequestContext(randomness: LibSignalClient.Randomness, receiptSerial: LibSignalClient.ReceiptSerial) throws -> LibSignalClient.ReceiptCredentialRequestContext
+  public func receiveReceiptCredential(receiptCredentialRequestContext: LibSignalClient.ReceiptCredentialRequestContext, receiptCredentialResponse: LibSignalClient.ReceiptCredentialResponse) throws -> LibSignalClient.ReceiptCredential
+  public func createReceiptCredentialPresentation(receiptCredential: LibSignalClient.ReceiptCredential) throws -> LibSignalClient.ReceiptCredentialPresentation
+  public func createReceiptCredentialPresentation(randomness: LibSignalClient.Randomness, receiptCredential: LibSignalClient.ReceiptCredential) throws -> LibSignalClient.ReceiptCredentialPresentation
+  @objc deinit
+}
+public struct NullContext : LibSignalClient.StoreContext {
+  public init()
+}
+public class InMemorySignalProtocolStore : LibSignalClient.IdentityKeyStore, LibSignalClient.PreKeyStore, LibSignalClient.SignedPreKeyStore, LibSignalClient.SessionStore, LibSignalClient.SenderKeyStore {
+  public init()
+  public init(identity: LibSignalClient.IdentityKeyPair, registrationId: Swift.UInt32)
+  public func identityKeyPair(context: any LibSignalClient.StoreContext) throws -> LibSignalClient.IdentityKeyPair
+  public func localRegistrationId(context: any LibSignalClient.StoreContext) throws -> Swift.UInt32
+  public func saveIdentity(_ identity: LibSignalClient.IdentityKey, for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws -> Swift.Bool
+  public func isTrustedIdentity(_ identity: LibSignalClient.IdentityKey, for address: LibSignalClient.ProtocolAddress, direction: LibSignalClient.Direction, context: any LibSignalClient.StoreContext) throws -> Swift.Bool
+  public func identity(for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.IdentityKey?
+  public func loadPreKey(id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.PreKeyRecord
+  public func storePreKey(_ record: LibSignalClient.PreKeyRecord, id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws
+  public func removePreKey(id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws
+  public func loadSignedPreKey(id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.SignedPreKeyRecord
+  public func storeSignedPreKey(_ record: LibSignalClient.SignedPreKeyRecord, id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws
+  public func loadSession(for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.SessionRecord?
+  public func loadExistingSessions(for addresses: [LibSignalClient.ProtocolAddress], context: any LibSignalClient.StoreContext) throws -> [LibSignalClient.SessionRecord]
+  public func storeSession(_ record: LibSignalClient.SessionRecord, for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws
+  public func storeSenderKey(from sender: LibSignalClient.ProtocolAddress, distributionId: Foundation.UUID, record: LibSignalClient.SenderKeyRecord, context: any LibSignalClient.StoreContext) throws
+  public func loadSenderKey(from sender: LibSignalClient.ProtocolAddress, distributionId: Foundation.UUID, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.SenderKeyRecord?
+  @objc deinit
+}
+public enum Direction {
+  case sending
+  case receiving
+  public static func == (a: LibSignalClient.Direction, b: LibSignalClient.Direction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol StoreContext {
+}
+public protocol IdentityKeyStore : AnyObject {
+  func identityKeyPair(context: any LibSignalClient.StoreContext) throws -> LibSignalClient.IdentityKeyPair
+  func localRegistrationId(context: any LibSignalClient.StoreContext) throws -> Swift.UInt32
+  func saveIdentity(_ identity: LibSignalClient.IdentityKey, for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws -> Swift.Bool
+  func isTrustedIdentity(_ identity: LibSignalClient.IdentityKey, for address: LibSignalClient.ProtocolAddress, direction: LibSignalClient.Direction, context: any LibSignalClient.StoreContext) throws -> Swift.Bool
+  func identity(for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.IdentityKey?
+}
+public protocol PreKeyStore : AnyObject {
+  func loadPreKey(id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.PreKeyRecord
+  func storePreKey(_ record: LibSignalClient.PreKeyRecord, id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws
+  func removePreKey(id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws
+}
+public protocol SignedPreKeyStore : AnyObject {
+  func loadSignedPreKey(id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.SignedPreKeyRecord
+  func storeSignedPreKey(_ record: LibSignalClient.SignedPreKeyRecord, id: Swift.UInt32, context: any LibSignalClient.StoreContext) throws
+}
+public protocol SessionStore : AnyObject {
+  func loadSession(for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.SessionRecord?
+  func loadExistingSessions(for addresses: [LibSignalClient.ProtocolAddress], context: any LibSignalClient.StoreContext) throws -> [LibSignalClient.SessionRecord]
+  func storeSession(_ record: LibSignalClient.SessionRecord, for address: LibSignalClient.ProtocolAddress, context: any LibSignalClient.StoreContext) throws
+}
+public protocol SenderKeyStore : AnyObject {
+  func storeSenderKey(from sender: LibSignalClient.ProtocolAddress, distributionId: Foundation.UUID, record: LibSignalClient.SenderKeyRecord, context: any LibSignalClient.StoreContext) throws
+  func loadSenderKey(from sender: LibSignalClient.ProtocolAddress, distributionId: Foundation.UUID, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.SenderKeyRecord?
+}
+public struct DeviceTransferKey {
+  public let privateKey: [Swift.UInt8]
+  public static func generate() -> LibSignalClient.DeviceTransferKey
+  public func privateKeyMaterial() -> [Swift.UInt8]
+  public func generateCertificate(_ name: Swift.String, _ daysTilExpire: Swift.Int) -> [Swift.UInt8]
+}
+public enum SignalError : Swift.Error {
+  case invalidState(Swift.String)
+  case internalError(Swift.String)
+  case nullParameter(Swift.String)
+  case invalidArgument(Swift.String)
+  case invalidType(Swift.String)
+  case invalidUtf8String(Swift.String)
+  case protobufError(Swift.String)
+  case legacyCiphertextVersion(Swift.String)
+  case unknownCiphertextVersion(Swift.String)
+  case unrecognizedMessageVersion(Swift.String)
+  case invalidMessage(Swift.String)
+  case invalidKey(Swift.String)
+  case invalidSignature(Swift.String)
+  case fingerprintVersionMismatch(Swift.String)
+  case fingerprintParsingError(Swift.String)
+  case sealedSenderSelfSend(Swift.String)
+  case untrustedIdentity(Swift.String)
+  case invalidKeyIdentifier(Swift.String)
+  case sessionNotFound(Swift.String)
+  case invalidSession(Swift.String)
+  case invalidRegistrationId(address: LibSignalClient.ProtocolAddress, message: Swift.String)
+  case invalidSenderKeySession(distributionId: Foundation.UUID, message: Swift.String)
+  case duplicatedMessage(Swift.String)
+  case verificationFailed(Swift.String)
+  case callbackError(Swift.String)
+  case unknown(Swift.UInt32, Swift.String)
+}
+public struct DisplayableFingerprint {
+  public let formatted: Swift.String
+}
+public struct ScannableFingerprint {
+  public let encoding: [Swift.UInt8]
+  public func compare(against other: LibSignalClient.ScannableFingerprint) throws -> Swift.Bool
+}
+public struct Fingerprint {
+  public let scannable: LibSignalClient.ScannableFingerprint
+  public let displayable: LibSignalClient.DisplayableFingerprint
+}
+public struct NumericFingerprintGenerator {
+  public init(iterations: Swift.Int)
+  public func create<LocalBytes, RemoteBytes>(version: Swift.Int, localIdentifier: LocalBytes, localKey: LibSignalClient.PublicKey, remoteIdentifier: RemoteBytes, remoteKey: LibSignalClient.PublicKey) throws -> LibSignalClient.Fingerprint where LocalBytes : Foundation.ContiguousBytes, RemoteBytes : Foundation.ContiguousBytes
+}
+@_hasMissingDesignatedInitializers public class GroupIdentifier : LibSignalClient.ByteArray {
+  public static let SIZE: Swift.Int
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GroupMasterKey : LibSignalClient.ByteArray {
+  public static let SIZE: Swift.Int
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GroupPublicParams : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getGroupIdentifier() throws -> LibSignalClient.GroupIdentifier
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GroupSecretParams : LibSignalClient.ByteArray {
+  public static func generate() throws -> LibSignalClient.GroupSecretParams
+  public static func generate(randomness: LibSignalClient.Randomness) throws -> LibSignalClient.GroupSecretParams
+  public static func deriveFromMasterKey(groupMasterKey: LibSignalClient.GroupMasterKey) throws -> LibSignalClient.GroupSecretParams
+  required public init(contents: [Swift.UInt8]) throws
+  public func getMasterKey() throws -> LibSignalClient.GroupMasterKey
+  public func getPublicParams() throws -> LibSignalClient.GroupPublicParams
+  @objc deinit
+}
+public struct HsmCodeHashList {
+  public init()
+  public mutating func append(_ codeHash: [Swift.UInt8]) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HsmEnclaveClient : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(publicKey: Bytes, codeHashes: LibSignalClient.HsmCodeHashList) throws where Bytes : Foundation.ContiguousBytes
+  public func initialRequest() throws -> [Swift.UInt8]
+  public func completeHandshake<Bytes>(_ handshakeResponse: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public func establishedSend<Bytes>(_ plaintextToSend: Bytes) throws -> [Swift.UInt8] where Bytes : Foundation.ContiguousBytes
+  public func establishedRecv<Bytes>(_ receivedCiphertext: Bytes) throws -> [Swift.UInt8] where Bytes : Foundation.ContiguousBytes
+  @objc deinit
+}
+public struct IdentityKey : Swift.Equatable {
+  public let publicKey: LibSignalClient.PublicKey
+  public init(publicKey: LibSignalClient.PublicKey)
+  public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public func serialize() -> [Swift.UInt8]
+  public func verifyAlternateIdentity<Bytes>(_ other: LibSignalClient.IdentityKey, signature: Bytes) throws -> Swift.Bool where Bytes : Foundation.ContiguousBytes
+  public static func == (a: LibSignalClient.IdentityKey, b: LibSignalClient.IdentityKey) -> Swift.Bool
+}
+public struct IdentityKeyPair {
+  public let publicKey: LibSignalClient.PublicKey
+  public let privateKey: LibSignalClient.PrivateKey
+  public static func generate() -> LibSignalClient.IdentityKeyPair
+  public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public init(publicKey: LibSignalClient.PublicKey, privateKey: LibSignalClient.PrivateKey)
+  public func serialize() -> [Swift.UInt8]
+  public var identityKey: LibSignalClient.IdentityKey {
+    get
+  }
+  public func signAlternateIdentity(_ other: LibSignalClient.IdentityKey) -> [Swift.UInt8]
+}
+public func hkdf<InputBytes, SaltBytes, InfoBytes>(outputLength: Swift.Int, inputKeyMaterial: InputBytes, salt: SaltBytes, info: InfoBytes) throws -> [Swift.UInt8] where InputBytes : Foundation.ContiguousBytes, SaltBytes : Foundation.ContiguousBytes, InfoBytes : Foundation.ContiguousBytes
+@available(*, deprecated, message: "Remove the 'version' parameter for standard HKDF behavior")
+public func hkdf<InputBytes, SaltBytes, InfoBytes>(outputLength: Swift.Int, version: Swift.UInt32, inputKeyMaterial: InputBytes, salt: SaltBytes, info: InfoBytes) throws -> [Swift.UInt8] where InputBytes : Foundation.ContiguousBytes, SaltBytes : Foundation.ContiguousBytes, InfoBytes : Foundation.ContiguousBytes
+@_hasMissingDesignatedInitializers public class NativeHandleOwner {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ClonableHandleOwner : LibSignalClient.NativeHandleOwner {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class NotarySignature : LibSignalClient.ByteArray {
+  public static let SIZE: Swift.Int
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PlaintextContent : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init(_ decryptionError: LibSignalClient.DecryptionErrorMessage)
+  public func serialize() -> [Swift.UInt8]
+  public var body: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DecryptionErrorMessage : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init<Bytes>(originalMessageBytes bytes: Bytes, type: LibSignalClient.CiphertextMessage.MessageType, timestamp: Swift.UInt64, originalSenderDeviceId: Swift.String) throws where Bytes : Foundation.ContiguousBytes
+  public static func extractFromSerializedContent<Bytes>(_ bytes: Bytes) throws -> LibSignalClient.DecryptionErrorMessage where Bytes : Foundation.ContiguousBytes
+  public func serialize() -> [Swift.UInt8]
+  public var ratchetKey: LibSignalClient.PublicKey? {
+    get
+  }
+  public var timestamp: Swift.UInt64 {
+    get
+  }
+  public var deviceId: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PniCredential : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PniCredentialPresentation : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getAciCiphertext() throws -> LibSignalClient.UuidCiphertext
+  public func getPniCiphertext() throws -> LibSignalClient.UuidCiphertext
+  public func getProfileKeyCiphertext() throws -> LibSignalClient.ProfileKeyCiphertext
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PniCredentialRequestContext : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getRequest() throws -> LibSignalClient.ProfileKeyCredentialRequest
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PniCredentialResponse : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PreKeyBundle : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(registrationId: Swift.UInt32, deviceId: Swift.String, prekeyId: Swift.UInt32, prekey: LibSignalClient.PublicKey, signedPrekeyId: Swift.UInt32, signedPrekey: LibSignalClient.PublicKey, signedPrekeySignature: Bytes, identity identityKey: LibSignalClient.IdentityKey) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init<Bytes>(registrationId: Swift.UInt32, deviceId: Swift.String, signedPrekeyId: Swift.UInt32, signedPrekey: LibSignalClient.PublicKey, signedPrekeySignature: Bytes, identity identityKey: LibSignalClient.IdentityKey) throws where Bytes : Foundation.ContiguousBytes
+  public var registrationId: Swift.UInt32 {
+    get
+  }
+  public var deviceId: Swift.String {
+    get
+  }
+  public var signedPreKeyId: Swift.UInt32 {
+    get
+  }
+  public var preKeyId: Swift.UInt32? {
+    get
+  }
+  public var preKeyPublic: LibSignalClient.PublicKey? {
+    get
+  }
+  public var identityKey: LibSignalClient.IdentityKey {
+    get
+  }
+  public var signedPreKeyPublic: LibSignalClient.PublicKey {
+    get
+  }
+  public var signedPreKeySignature: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PreKeyRecord : LibSignalClient.ClonableHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init(id: Swift.UInt32, publicKey: LibSignalClient.PublicKey, privateKey: LibSignalClient.PrivateKey) throws
+  convenience public init(id: Swift.UInt32, privateKey: LibSignalClient.PrivateKey) throws
+  public func serialize() -> [Swift.UInt8]
+  public var id: Swift.UInt32 {
+    get
+  }
+  public var publicKey: LibSignalClient.PublicKey {
+    get
+  }
+  public var privateKey: LibSignalClient.PrivateKey {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PreKeySignalMessage : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public func serialize() throws -> [Swift.UInt8]
+  public func version() throws -> Swift.UInt32
+  public func registrationId() throws -> Swift.UInt32
+  public func preKeyId() throws -> Swift.UInt32?
+  public var signedPreKeyId: Swift.UInt32 {
+    get
+  }
+  public var baseKey: LibSignalClient.PublicKey {
+    get
+  }
+  public var identityKey: LibSignalClient.PublicKey {
+    get
+  }
+  public var signalMessage: LibSignalClient.SignalMessage {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PrivateKey : LibSignalClient.ClonableHandleOwner {
+  convenience public init<Bytes>(_ bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public static func generate() -> LibSignalClient.PrivateKey
+  public func serialize() -> [Swift.UInt8]
+  public func generateSignature<Bytes>(message: Bytes) -> [Swift.UInt8] where Bytes : Foundation.ContiguousBytes
+  public func keyAgreement(with other: LibSignalClient.PublicKey) -> [Swift.UInt8]
+  public var publicKey: LibSignalClient.PublicKey {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKey : LibSignalClient.ByteArray {
+  public static let SIZE: Swift.Int
+  required public init(contents: [Swift.UInt8]) throws
+  public func getCommitment(uuid: Foundation.UUID) throws -> LibSignalClient.ProfileKeyCommitment
+  public func getProfileKeyVersion(uuid: Foundation.UUID) throws -> LibSignalClient.ProfileKeyVersion
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyCiphertext : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyCommitment : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyCredential : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyCredentialPresentation : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getUuidCiphertext() throws -> LibSignalClient.UuidCiphertext
+  public func getProfileKeyCiphertext() throws -> LibSignalClient.ProfileKeyCiphertext
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyCredentialRequest : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyCredentialRequestContext : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getRequest() throws -> LibSignalClient.ProfileKeyCredentialRequest
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyCredentialResponse : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProfileKeyVersion : LibSignalClient.ByteArray {
+  public static let SIZE: Swift.Int
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+public func signalEncrypt<Bytes>(message: Bytes, for address: LibSignalClient.ProtocolAddress, sessionStore: any LibSignalClient.SessionStore, identityStore: any LibSignalClient.IdentityKeyStore, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.CiphertextMessage where Bytes : Foundation.ContiguousBytes
+public func signalDecrypt(message: LibSignalClient.SignalMessage, from address: LibSignalClient.ProtocolAddress, sessionStore: any LibSignalClient.SessionStore, identityStore: any LibSignalClient.IdentityKeyStore, context: any LibSignalClient.StoreContext) throws -> [Swift.UInt8]
+public func signalDecryptPreKey(message: LibSignalClient.PreKeySignalMessage, from address: LibSignalClient.ProtocolAddress, sessionStore: any LibSignalClient.SessionStore, identityStore: any LibSignalClient.IdentityKeyStore, preKeyStore: any LibSignalClient.PreKeyStore, signedPreKeyStore: any LibSignalClient.SignedPreKeyStore, context: any LibSignalClient.StoreContext) throws -> [Swift.UInt8]
+public func processPreKeyBundle(_ bundle: LibSignalClient.PreKeyBundle, for address: LibSignalClient.ProtocolAddress, sessionStore: any LibSignalClient.SessionStore, identityStore: any LibSignalClient.IdentityKeyStore, context: any LibSignalClient.StoreContext) throws
+public func groupEncrypt<Bytes>(_ message: Bytes, from sender: LibSignalClient.ProtocolAddress, distributionId: Foundation.UUID, store: any LibSignalClient.SenderKeyStore, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.CiphertextMessage where Bytes : Foundation.ContiguousBytes
+public func groupDecrypt<Bytes>(_ message: Bytes, from sender: LibSignalClient.ProtocolAddress, store: any LibSignalClient.SenderKeyStore, context: any LibSignalClient.StoreContext) throws -> [Swift.UInt8] where Bytes : Foundation.ContiguousBytes
+public func processSenderKeyDistributionMessage(_ message: LibSignalClient.SenderKeyDistributionMessage, from sender: LibSignalClient.ProtocolAddress, store: any LibSignalClient.SenderKeyStore, context: any LibSignalClient.StoreContext) throws
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PublicKey : LibSignalClient.ClonableHandleOwner {
+  convenience public init<Bytes>(_ bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public var keyBytes: [Swift.UInt8] {
+    get
+  }
+  public func serialize() -> [Swift.UInt8]
+  public func verifySignature<MessageBytes, SignatureBytes>(message: MessageBytes, signature: SignatureBytes) throws -> Swift.Bool where MessageBytes : Foundation.ContiguousBytes, SignatureBytes : Foundation.ContiguousBytes
+  public func compare(_ other: LibSignalClient.PublicKey) -> Swift.Int32
+  @objc deinit
+}
+extension LibSignalClient.PublicKey : Swift.Equatable {
+  public static func == (lhs: LibSignalClient.PublicKey, rhs: LibSignalClient.PublicKey) -> Swift.Bool
+}
+extension LibSignalClient.PublicKey : Swift.Comparable {
+  public static func < (lhs: LibSignalClient.PublicKey, rhs: LibSignalClient.PublicKey) -> Swift.Bool
+}
+public struct Randomness {
+  public var bytes: SignalFfi.SignalRandomnessBytes
+  public init(_ bytes: SignalFfi.SignalRandomnessBytes)
+}
+@_hasMissingDesignatedInitializers public class ReceiptCredential : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getReceiptExpirationTime() throws -> Swift.UInt64
+  public func getReceiptLevel() throws -> Swift.UInt64
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ReceiptCredentialPresentation : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getReceiptExpirationTime() throws -> Swift.UInt64
+  public func getReceiptLevel() throws -> Swift.UInt64
+  public func getReceiptSerial() throws -> LibSignalClient.ReceiptSerial
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ReceiptCredentialRequest : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ReceiptCredentialRequestContext : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func getRequest() throws -> LibSignalClient.ReceiptCredentialRequest
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ReceiptCredentialResponse : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ReceiptSerial : LibSignalClient.ByteArray {
+  public static let SIZE: Swift.Int
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+@inlinable public func sealedSenderEncrypt<Bytes>(message: Bytes, for address: LibSignalClient.ProtocolAddress, from senderCert: LibSignalClient.SenderCertificate, sessionStore: any LibSignalClient.SessionStore, identityStore: any LibSignalClient.IdentityKeyStore, context: any LibSignalClient.StoreContext) throws -> [Swift.UInt8] where Bytes : Foundation.ContiguousBytes {
+    let ciphertextMessage = try signalEncrypt(message: message,
+                                              for: address,
+                                              sessionStore: sessionStore,
+                                              identityStore: identityStore,
+                                              context: context)
+
+    let usmc = try UnidentifiedSenderMessageContent(ciphertextMessage,
+                                                    from: senderCert,
+                                                    contentHint: .default,
+                                                    groupId: [])
+
+    return try sealedSenderEncrypt(usmc, for: address, identityStore: identityStore, context: context)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UnidentifiedSenderMessageContent : LibSignalClient.NativeHandleOwner {
+  public struct ContentHint : Swift.RawRepresentable, Swift.Hashable {
+    public var rawValue: Swift.UInt32
+    public init(rawValue: Swift.UInt32)
+    public static var `default`: LibSignalClient.UnidentifiedSenderMessageContent.ContentHint {
+      get
+    }
+    public static var resendable: LibSignalClient.UnidentifiedSenderMessageContent.ContentHint {
+      get
+    }
+    public static var implicit: LibSignalClient.UnidentifiedSenderMessageContent.ContentHint {
+      get
+    }
+    public typealias RawValue = Swift.UInt32
+  }
+  convenience public init<Bytes>(message sealedSenderMessage: Bytes, identityStore: any LibSignalClient.IdentityKeyStore, context: any LibSignalClient.StoreContext) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init<GroupIdBytes>(_ message: LibSignalClient.CiphertextMessage, from sender: LibSignalClient.SenderCertificate, contentHint: LibSignalClient.UnidentifiedSenderMessageContent.ContentHint, groupId: GroupIdBytes) throws where GroupIdBytes : Foundation.ContiguousBytes
+  public var senderCertificate: LibSignalClient.SenderCertificate {
+    get
+  }
+  public var messageType: LibSignalClient.CiphertextMessage.MessageType {
+    get
+  }
+  public var contents: [Swift.UInt8] {
+    get
+  }
+  public var groupId: [Swift.UInt8]? {
+    get
+  }
+  public var contentHint: LibSignalClient.UnidentifiedSenderMessageContent.ContentHint {
+    get
+  }
+  @objc deinit
+}
+public func sealedSenderEncrypt(_ content: LibSignalClient.UnidentifiedSenderMessageContent, for recipient: LibSignalClient.ProtocolAddress, identityStore: any LibSignalClient.IdentityKeyStore, context: any LibSignalClient.StoreContext) throws -> [Swift.UInt8]
+public func sealedSenderMultiRecipientEncrypt(_ content: LibSignalClient.UnidentifiedSenderMessageContent, for recipients: [LibSignalClient.ProtocolAddress], identityStore: any LibSignalClient.IdentityKeyStore, sessionStore: any LibSignalClient.SessionStore, context: any LibSignalClient.StoreContext) throws -> [Swift.UInt8]
+public struct SealedSenderAddress : Swift.Hashable {
+  public var e164: Swift.String?
+  public var uuidString: Swift.String
+  public var deviceId: Swift.String
+  public init(e164: Swift.String?, uuidString: Swift.String, deviceId: Swift.String) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: LibSignalClient.SealedSenderAddress, b: LibSignalClient.SealedSenderAddress) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SealedSenderResult {
+  public var message: [Swift.UInt8]
+  public var sender: LibSignalClient.SealedSenderAddress
+}
+public func sealedSenderDecrypt<Bytes>(message: Bytes, from localAddress: LibSignalClient.SealedSenderAddress, trustRoot: LibSignalClient.PublicKey, timestamp: Swift.UInt64, sessionStore: any LibSignalClient.SessionStore, identityStore: any LibSignalClient.IdentityKeyStore, preKeyStore: any LibSignalClient.PreKeyStore, signedPreKeyStore: any LibSignalClient.SignedPreKeyStore, context: any LibSignalClient.StoreContext) throws -> LibSignalClient.SealedSenderResult where Bytes : Foundation.ContiguousBytes
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ServerCertificate : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(_ bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init(keyId: Swift.UInt32, publicKey: LibSignalClient.PublicKey, trustRoot: LibSignalClient.PrivateKey) throws
+  public var keyId: Swift.UInt32 {
+    get
+  }
+  public func serialize() -> [Swift.UInt8]
+  public var certificateBytes: [Swift.UInt8] {
+    get
+  }
+  public var signatureBytes: [Swift.UInt8] {
+    get
+  }
+  public var publicKey: LibSignalClient.PublicKey {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SenderCertificate : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(_ bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init(sender: LibSignalClient.SealedSenderAddress, publicKey: LibSignalClient.PublicKey, expiration: Swift.UInt64, signerCertificate: LibSignalClient.ServerCertificate, signerKey: LibSignalClient.PrivateKey) throws
+  public var expiration: Swift.UInt64 {
+    get
+  }
+  public var deviceId: Swift.String {
+    get
+  }
+  public func serialize() -> [Swift.UInt8]
+  public var certificateBytes: [Swift.UInt8] {
+    get
+  }
+  public var signatureBytes: [Swift.UInt8] {
+    get
+  }
+  public var publicKey: LibSignalClient.PublicKey {
+    get
+  }
+  public var senderUuid: Swift.String {
+    get
+  }
+  public var senderE164: Swift.String? {
+    get
+  }
+  public var sender: LibSignalClient.SealedSenderAddress {
+    get
+  }
+  public var serverCertificate: LibSignalClient.ServerCertificate {
+    get
+  }
+  public func validate(trustRoot: LibSignalClient.PublicKey, time: Swift.UInt64) throws -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SenderKeyDistributionMessage : LibSignalClient.NativeHandleOwner {
+  convenience public init(from sender: LibSignalClient.ProtocolAddress, distributionId: Foundation.UUID, store: any LibSignalClient.SenderKeyStore, context: any LibSignalClient.StoreContext) throws
+  convenience public init(bytes: [Swift.UInt8]) throws
+  public var signatureKey: LibSignalClient.PublicKey {
+    get
+  }
+  public var distributionId: Foundation.UUID {
+    get
+  }
+  public var chainId: Swift.UInt32 {
+    get
+  }
+  public var iteration: Swift.UInt32 {
+    get
+  }
+  public func serialize() -> [Swift.UInt8]
+  public var chainKey: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SenderKeyMessage : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public var distributionId: Foundation.UUID {
+    get
+  }
+  public var chainId: Swift.UInt32 {
+    get
+  }
+  public var iteration: Swift.UInt32 {
+    get
+  }
+  public func serialize() -> [Swift.UInt8]
+  public var ciphertext: [Swift.UInt8] {
+    get
+  }
+  public func verifySignature(against key: LibSignalClient.PublicKey) throws -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SenderKeyRecord : LibSignalClient.ClonableHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public func serialize() -> [Swift.UInt8]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ServerPublicParams : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  public func verifySignature(message: [Swift.UInt8], notarySignature: LibSignalClient.NotarySignature) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ServerSecretParams : LibSignalClient.ByteArray {
+  public static func generate() throws -> LibSignalClient.ServerSecretParams
+  public static func generate(randomness: LibSignalClient.Randomness) throws -> LibSignalClient.ServerSecretParams
+  required public init(contents: [Swift.UInt8]) throws
+  public func getPublicParams() throws -> LibSignalClient.ServerPublicParams
+  public func sign(message: [Swift.UInt8]) throws -> LibSignalClient.NotarySignature
+  public func sign(randomness: LibSignalClient.Randomness, message: [Swift.UInt8]) throws -> LibSignalClient.NotarySignature
+  @objc deinit
+}
+public class ServerZkAuthOperations {
+  public init(serverSecretParams: LibSignalClient.ServerSecretParams)
+  public func issueAuthCredential(uuid: Foundation.UUID, redemptionTime: Swift.UInt32) throws -> LibSignalClient.AuthCredentialResponse
+  public func issueAuthCredential(randomness: LibSignalClient.Randomness, uuid: Foundation.UUID, redemptionTime: Swift.UInt32) throws -> LibSignalClient.AuthCredentialResponse
+  public func verifyAuthCredentialPresentation(groupPublicParams: LibSignalClient.GroupPublicParams, authCredentialPresentation: LibSignalClient.AuthCredentialPresentation) throws
+  @objc deinit
+}
+public class ServerZkProfileOperations {
+  public init(serverSecretParams: LibSignalClient.ServerSecretParams)
+  public func issueProfileKeyCredential(profileKeyCredentialRequest: LibSignalClient.ProfileKeyCredentialRequest, uuid: Foundation.UUID, profileKeyCommitment: LibSignalClient.ProfileKeyCommitment) throws -> LibSignalClient.ProfileKeyCredentialResponse
+  public func issueProfileKeyCredential(randomness: LibSignalClient.Randomness, profileKeyCredentialRequest: LibSignalClient.ProfileKeyCredentialRequest, uuid: Foundation.UUID, profileKeyCommitment: LibSignalClient.ProfileKeyCommitment) throws -> LibSignalClient.ProfileKeyCredentialResponse
+  public func issuePniCredential(profileKeyCredentialRequest: LibSignalClient.ProfileKeyCredentialRequest, aci: Foundation.UUID, pni: Foundation.UUID, profileKeyCommitment: LibSignalClient.ProfileKeyCommitment) throws -> LibSignalClient.PniCredentialResponse
+  public func issuePniCredential(randomness: LibSignalClient.Randomness, profileKeyCredentialRequest: LibSignalClient.ProfileKeyCredentialRequest, aci: Foundation.UUID, pni: Foundation.UUID, profileKeyCommitment: LibSignalClient.ProfileKeyCommitment) throws -> LibSignalClient.PniCredentialResponse
+  public func verifyProfileKeyCredentialPresentation(groupPublicParams: LibSignalClient.GroupPublicParams, profileKeyCredentialPresentation: LibSignalClient.ProfileKeyCredentialPresentation) throws
+  public func verifyPniCredentialPresentation(groupPublicParams: LibSignalClient.GroupPublicParams, presentation: LibSignalClient.PniCredentialPresentation) throws
+  @objc deinit
+}
+public class ServerZkReceiptOperations {
+  public init(serverSecretParams: LibSignalClient.ServerSecretParams)
+  public func issueReceiptCredential(receiptCredentialRequest: LibSignalClient.ReceiptCredentialRequest, receiptExpirationTime: Swift.UInt64, receiptLevel: Swift.UInt64) throws -> LibSignalClient.ReceiptCredentialResponse
+  public func issueReceiptCredential(randomness: LibSignalClient.Randomness, receiptCredentialRequest: LibSignalClient.ReceiptCredentialRequest, receiptExpirationTime: Swift.UInt64, receiptLevel: Swift.UInt64) throws -> LibSignalClient.ReceiptCredentialResponse
+  public func verifyReceiptCredentialPresentation(receiptCredentialPresentation: LibSignalClient.ReceiptCredentialPresentation) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SessionRecord : LibSignalClient.ClonableHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public func serialize() -> [Swift.UInt8]
+  public var hasCurrentState: Swift.Bool {
+    get
+  }
+  public var needsPniSignature: Swift.Bool {
+    get
+    set
+  }
+  public func archiveCurrentState()
+  public func remoteRegistrationId() throws -> Swift.UInt32
+  public func currentRatchetKeyMatches(_ key: LibSignalClient.PublicKey) throws -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SignalMessage : LibSignalClient.NativeHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public var senderRatchetKey: LibSignalClient.PublicKey {
+    get
+  }
+  public var body: [Swift.UInt8] {
+    get
+  }
+  public func serialize() -> [Swift.UInt8]
+  public var messageVersion: Swift.UInt32 {
+    get
+  }
+  public var counter: Swift.UInt32 {
+    get
+  }
+  public func verifyMac<Bytes>(sender: LibSignalClient.PublicKey, receiver: LibSignalClient.PublicKey, macKey: Bytes) throws -> Swift.Bool where Bytes : Foundation.ContiguousBytes
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SignedPreKeyRecord : LibSignalClient.ClonableHandleOwner {
+  convenience public init<Bytes>(bytes: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  convenience public init<Bytes>(id: Swift.UInt32, timestamp: Swift.UInt64, privateKey: LibSignalClient.PrivateKey, signature: Bytes) throws where Bytes : Foundation.ContiguousBytes
+  public func serialize() -> [Swift.UInt8]
+  public var id: Swift.UInt32 {
+    get
+  }
+  public var timestamp: Swift.UInt64 {
+    get
+  }
+  public var publicKey: LibSignalClient.PublicKey {
+    get
+  }
+  public var privateKey: LibSignalClient.PrivateKey {
+    get
+  }
+  public var signature: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class UuidCiphertext : LibSignalClient.ByteArray {
+  required public init(contents: [Swift.UInt8]) throws
+  @objc deinit
+}
+extension LibSignalClient.Direction : Swift.Equatable {}
+extension LibSignalClient.Direction : Swift.Hashable {}

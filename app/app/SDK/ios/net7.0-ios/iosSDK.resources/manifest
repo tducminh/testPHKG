@@ -1,5 +1,25 @@
 ﻿<BindingAssembly>
+	<NativeReference Name="Encryption.framework">
+		<ForceLoad></ForceLoad>
+		<Frameworks></Frameworks>
+		<IsCxx></IsCxx>
+		<Kind>Framework</Kind>
+		<LinkerFlags></LinkerFlags>
+		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
+		<SmartLink></SmartLink>
+		<WeakFrameworks></WeakFrameworks>
+	</NativeReference>
 	<NativeReference Name="CocoaLumberjack.framework">
+		<ForceLoad></ForceLoad>
+		<Frameworks></Frameworks>
+		<IsCxx></IsCxx>
+		<Kind>Framework</Kind>
+		<LinkerFlags></LinkerFlags>
+		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
+		<SmartLink></SmartLink>
+		<WeakFrameworks></WeakFrameworks>
+	</NativeReference>
+	<NativeReference Name="FCUUID.framework">
 		<ForceLoad></ForceLoad>
 		<Frameworks></Frameworks>
 		<IsCxx></IsCxx>
@@ -29,7 +49,7 @@
 		<SmartLink></SmartLink>
 		<WeakFrameworks></WeakFrameworks>
 	</NativeReference>
-	<NativeReference Name="Encryption.framework">
+	<NativeReference Name="UICKeyChainStore.framework">
 		<ForceLoad></ForceLoad>
 		<Frameworks></Frameworks>
 		<IsCxx></IsCxx>

@@ -13,16 +13,22 @@
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\CocoaLumberjack\CocoaLumberjack.framework">
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\Encryption.framework">
       <Kind>Framework</Kind>
     </NativeReference>
-    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\LibSignalClient\LibSignalClient.framework">
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\CocoaLumberjack.framework">
       <Kind>Framework</Kind>
     </NativeReference>
-    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\SignalCoreKit\SignalCoreKit.framework">
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\FCUUID.framework">
       <Kind>Framework</Kind>
     </NativeReference>
-    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\Encryption.framework">
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\LibSignalClient.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\SignalCoreKit.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <NativeReference Include="..\..\sdk_resource\ios\ResourcesSDK\NativeFrameworks\UICKeyChainStore.framework">
       <Kind>Framework</Kind>
     </NativeReference>
   </ItemGroup>
